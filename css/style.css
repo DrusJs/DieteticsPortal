@@ -311,6 +311,33 @@ a.phone {
     border-radius: 30px;
     border: 1px solid var(--color-green);
 }
+.specialist-info .person::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background-image: url(../images/icons/person-icon.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.specialist-info .mail::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background-image: url(../images/icons/email-icon.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.specialist-info .experience::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background-image: url(../images/icons/exp-icon.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 .rating-block {
     cursor: pointer;
 }
