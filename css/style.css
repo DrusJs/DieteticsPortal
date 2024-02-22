@@ -50,7 +50,6 @@ body {
 }
 body.no-scroll {
     overflow: hidden;
-    padding-right: 17px;
 }
 
 h1.title {
@@ -196,6 +195,12 @@ a.phone {
     height: 36px;
     border: 1px solid var(--color-green);
     border-radius: 100%;
+    background-image: url(../images/icons/burger-icon.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.burger-button.active {
+    background-image: url(../images/icons/modal-close-icon.svg);
 }
 .main-image {
     border-radius: 15px;
@@ -212,6 +217,7 @@ a.phone {
     border-radius: 50px;
     color: var(--colo-gray1);
     transition: var(--transition);
+    font-size: 24px;
     padding: 0 8px;
     cursor: pointer;
 }
@@ -266,6 +272,75 @@ a.phone {
     display: flex;
     align-content: center;
     justify-content: center;
+}
+.search-item {    
+    width: 100%;
+}
+.search-item .search {
+    padding: 15px 41px 13px 15px;
+    background-image: url(../images/icons/search-icon.svg);
+    background-size: 16px 16px;
+    background-position: center right 15px;
+    background-repeat: no-repeat;
+    background-color: var(--colo-gray6);
+    border: none;
+    outline: none;
+}
+.search-item .search::placeholder {
+    color: var(--colo-gray3);
+}
+.filter-select-head {
+    cursor: pointer;
+}
+.filter-select-head::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    background-image: url(../images/icons/filter-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.specialist-info .status {
+    color: var(--colo-gray3);
+}
+.specialist-info .status.active {
+    color: var(--color-green);
+    padding: 2px 8px 2px;
+    border-radius: 30px;
+    border: 1px solid var(--color-green);
+}
+.rating-block {
+    cursor: pointer;
+}
+.rating-block span {
+    color: var(--color-yellow);
+}
+.rating-block p {
+    margin: 0;
+}
+.specialist-actions {
+    border-radius: 15px;
+    background-color: var(--colo-gray6);
+    padding: 20px;
+}
+.primary-button {
+    color: var(--color-green);
+    border-radius: 100px;
+    padding: 8px 12px;
+    height: 36px;
+    line-height: 18px;
+    white-space: nowrap;
+}
+.primary-button.fill {
+    color: var(--color-white);
+    border: 1px solid var(--color-green);
+    background-color: var(--color-green);
+}
+.primary-button.bordered {
+    border: 1px solid var(--color-green);
+    background-color: var(--color-white);
 }
 
 

@@ -28,7 +28,7 @@
                                 <li class="location-select-dropdown__item">Екатеринбург</li>
                             </ul>
                         </div>
-                        <div class="header-action d-flex align-items-center gap-3">
+                        <div class="header-action d-md-flex d-none align-items-center gap-3">
                             <div class="d-flex flex-column justify-content-center align-items-end">
                                 <p class="text-desc c-gray m-0">Техническая поддержка</p>
                                 <a class="phone text-m c-green" href="tel:+88001111111">8 800 111 11 11</a>
@@ -61,16 +61,6 @@
                             </a>
                         </div>
                         <div class="burger-button d-md-none d-flex align-items-center justify-content-center">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2207_614)">
-                                    <path d="M2.66667 12H13.3333C13.7 12 14 11.7 14 11.3333C14 10.9667 13.7 10.6667 13.3333 10.6667H2.66667C2.3 10.6667 2 10.9667 2 11.3333C2 11.7 2.3 12 2.66667 12ZM2.66667 8.66667H13.3333C13.7 8.66667 14 8.36667 14 8C14 7.63333 13.7 7.33333 13.3333 7.33333H2.66667C2.3 7.33333 2 7.63333 2 8C2 8.36667 2.3 8.66667 2.66667 8.66667ZM2 4.66667C2 5.03333 2.3 5.33333 2.66667 5.33333H13.3333C13.7 5.33333 14 5.03333 14 4.66667C14 4.3 13.7 4 13.3333 4H2.66667C2.3 4 2 4.3 2 4.66667Z" fill="#27AE60"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_2207_614">
-                                        <rect width="16" height="16" fill="white"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
                         </div>
                     </div>
                     <nav>
@@ -93,34 +83,36 @@
                 <div class="container round mb-4">
                     <div class="d-flex align-items-center justify-content-between">
                         <h1 class="title">Выберите специалиста</h1>
-                        <div class="filter-search-block">
+                        <div class="filter-search-block d-flex align-items-center gap-3">
                             <div class="search-item">
                                 <input type="text" class="search" placeholder="ФИО врача">
                             </div>
                             <div class="filter-select">
-                                <div class="filter-select-head">Фильтр</div>
-                                <div class="filter-select-dropdown"></div>
+                                <div class="filter-select-head d-flex align-items-center c-gray">Фильтр</div>
+                                <ul class="filter-select-dropdown mb-0">
+                                    
+                                </ul>
                             </div>
                         </div>
                     </div>
                     <div class="d-flex flex-column gap-3">
-                        <div class="specialist-card">
+                        <div class="specialist-card d-flex gap-3">
                             <div class="specialist-photo">
                                 <img src="images/photo-spec1.jpg" alt="">
                             </div>
                             <div class="specialist-info">
                                 <h2 class="title">Сергей Горякин</h2>
-                                <span class="status">Онлайн</span>
+                                <span class="status">Оффлайн</span>
                                 <p class="person text-desc c-gray">
                                     Врач-эксперт
                                 </p>
-                                <p class="person text-desc c-gray">
+                                <p class="experience text-desc c-gray">
                                     Стаж 10 лет
                                 </p>
-                                <p class="person text-desc c-gray">
+                                <p class="mail text-desc c-gray">
                                     Портал диетологии
                                 </p>
-                                <div class="rating-block">
+                                <div class="rating-block d-flex align-items-center gap-2  js-open-modal" data-modal="specialist-modal">
                                     <p class="text-desc">10 отзывов</p>
                                     <img src="images/icons/rating-icon.svg" alt="">
                                     <span>8 из 10</span>
@@ -134,95 +126,7 @@
                                     <h2 class="title">Онлайн-консультация</h2>
                                     <p class="price text-l">1500 руб.</p>
                                     <button class="primary-button bordered">Все даты</button>
-                                    <button class="primary-button fill js-open-modal" data-modal="specialist-modal">Выбрать</button>
-                                </div>
-                                <div class="swap-select js-swap-active d-flex gap-1">
-                                    <span class="swap-select__item active">Сегодня</span>
-                                    <span class="swap-select__item">21 дек</span>
-                                    <span class="swap-select__item">25 дек</span>
-                                </div>
-                                <div class="swap-select js-swap-active d-flex gap-1">
-                                    <span class="swap-select__item active">11:00</span>
-                                    <span class="swap-select__item">18:30</span>
-                                    <span class="swap-select__item">11:00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="specialist-card">
-                            <div class="specialist-photo">
-                                <img src="images/photo-spec2.jpg" alt="">
-                            </div>
-                            <div class="specialist-info">
-                                <h2 class="title">Елена Петрова</h2>
-                                <span class="status">Онлайн</span>
-                                <p class="person text-desc c-gray">
-                                    Врач-консультант
-                                </p>
-                                <p class="person text-desc c-gray">
-                                    Стаж 3 лет
-                                </p>
-                                <p class="person text-desc c-gray">
-                                    Портал диетологии
-                                </p>
-                                <div class="rating-block">
-                                    <p class="text-desc">10 отзывов</p>
-                                    <img src="images/icons/rating-icon.svg" alt="">
-                                    <span>9 из 10</span>
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.69305 10.5867L9.27971 7.99999L6.69305 5.41332C6.43305 5.15332 6.43305 4.73332 6.69305 4.47332C6.95305 4.21332 7.37305 4.21332 7.63305 4.47332L10.693 7.53332C10.953 7.79332 10.953 8.21332 10.693 8.47332L7.63305 11.5333C7.37305 11.7933 6.95305 11.7933 6.69305 11.5333C6.43971 11.2733 6.43305 10.8467 6.69305 10.5867Z" fill="#333333"/>
-                                    </svg>                                        
-                                </div>
-                            </div>
-                            <div class="specialist-actions">
-                                <div class="d-flex">
-                                    <h2 class="title">Онлайн-консультация</h2>
-                                    <p class="price text-l">1500 руб.</p>
-                                    <button class="primary-button bordered">Все даты</button>
-                                    <button class="primary-button fill js-open-modal" data-modal="specialist-modal">Выбрать</button>
-                                </div>
-                                <div class="swap-select js-swap-active d-flex gap-1">
-                                    <span class="swap-select__item active">Сегодня</span>
-                                    <span class="swap-select__item">21 дек</span>
-                                    <span class="swap-select__item">25 дек</span>
-                                </div>
-                                <div class="swap-select js-swap-active d-flex gap-1">
-                                    <span class="swap-select__item active">11:00</span>
-                                    <span class="swap-select__item">18:30</span>
-                                    <span class="swap-select__item">11:00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="specialist-card">
-                            <div class="specialist-photo">
-                                <img src="images/photo-spec3.jpg" alt="">
-                            </div>
-                            <div class="specialist-info">
-                                <h2 class="title">Тамара Мустафаева</h2>
-                                <span class="status">Онлайн</span>
-                                <p class="person text-desc c-gray">
-                                    Консультант по питанию
-                                </p>
-                                <p class="person text-desc c-gray">
-                                    Стаж 5 лет
-                                </p>
-                                <p class="person text-desc c-gray">
-                                    Портал диетологии
-                                </p>
-                                <div class="rating-block">
-                                    <p class="text-desc">10 отзывов</p>
-                                    <img src="images/icons/rating-icon.svg" alt="">
-                                    <span>9 из 10</span>
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.69305 10.5867L9.27971 7.99999L6.69305 5.41332C6.43305 5.15332 6.43305 4.73332 6.69305 4.47332C6.95305 4.21332 7.37305 4.21332 7.63305 4.47332L10.693 7.53332C10.953 7.79332 10.953 8.21332 10.693 8.47332L7.63305 11.5333C7.37305 11.7933 6.95305 11.7933 6.69305 11.5333C6.43971 11.2733 6.43305 10.8467 6.69305 10.5867Z" fill="#333333"/>
-                                    </svg>                                        
-                                </div>
-                            </div>
-                            <div class="specialist-actions">
-                                <div class="d-flex">
-                                    <h2 class="title">Онлайн-консультация</h2>
-                                    <p class="price text-l">1500 руб.</p>
-                                    <button class="primary-button bordered">Все даты</button>
-                                    <button class="primary-button fill js-open-modal" data-modal="specialist-modal">Выбрать</button>
+                                    <button class="primary-button fill">Выбрать</button>
                                 </div>
                                 <div class="swap-select js-swap-active d-flex gap-1">
                                     <span class="swap-select__item active">Сегодня</span>
@@ -299,7 +203,7 @@
                     </div>
                     <div class="d-flex gap-5">
                         <h2 class="title c-green">Отзывы</h2>
-                        <div class="rating-block">
+                        <div class="rating-block d-flex align-items-center gap-2">
                             <p class="text-desc">10 отзывов</p>
                             <img src="images/icons/rating-icon.svg" alt="">
                             <span>9 из 10</span>                                        
