@@ -275,9 +275,12 @@ a.phone {
 }
 .search-item {    
     width: 100%;
+    min-width: 441px;
 }
 .search-item .search {
     padding: 15px 41px 13px 15px;
+    max-width: 441px;
+    width: 100%;
     background-image: url(../images/icons/search-icon.svg);
     background-size: 16px 16px;
     background-position: center right 15px;
@@ -301,6 +304,23 @@ a.phone {
     background-image: url(../images/icons/filter-icon.svg);
     background-repeat: no-repeat;
     background-position: center center;
+}
+.specialist-card {
+    border-bottom: 1px solid var(--colo-gray4);
+    padding-bottom: 20px;
+}
+.specialist-card:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.specialist-actions {
+    min-width: 535px;
+}
+.specialist-actions .price {
+    color: var(--colo-gray3);
+}
+.specialist-actions-inner {
+    border-bottom: 1px solid var(--colo-gray3);
 }
 .specialist-info .status {
     color: var(--colo-gray3);
@@ -369,7 +389,23 @@ a.phone {
     border: 1px solid var(--color-green);
     background-color: var(--color-white);
 }
-
+.favorite-button {
+    border: 0;
+    background-color: transparent;
+    margin-left: auto;
+}
+.favorite-button path {
+    transition: var(--transition);
+}
+.favorite-button.active path {
+    fill: var(--colo-gray1);
+}
+.rating-block {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--colo-gray6);
+    width: fit-content;
+}
 
 
 @media (max-width: 787px) {

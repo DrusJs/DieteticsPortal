@@ -47,3 +47,10 @@ if (document.querySelector('.js-open-modal')) {
         })
     })
 }
+if (document.querySelector('.favorite-button')) {
+    document.querySelectorAll('.favorite-button').forEach(el=>{
+        el.addEventListener('click', (event)=>{
+            event.currentTarget.classList.toggle('active')
+        })
+    })
+}
