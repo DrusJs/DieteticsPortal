@@ -88,6 +88,7 @@ p.text-s {
 .c-green {
     color: var(--color-green);
 }
+
  
 
 
@@ -107,7 +108,20 @@ p.text-s {
 }
 .location-select-head {
     cursor: pointer;
-    min-width: 200px;
+    min-width: 155px;
+}
+.location-select-head .location::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url(../images/icons/select-arrow.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    position: relative;
+    top: 3px;
+    left: 4px;
 }
 .location-select-dropdown__item {
     cursor: pointer;
@@ -292,6 +306,16 @@ a.phone {
 .search-item .search::placeholder {
     color: var(--colo-gray3);
 }
+.primary-input {
+    padding: 11px 15px 10px 15px;
+    width: 100%;
+    background-color: var(--colo-gray6);
+    border: none;
+    outline: none;
+}
+.primary-input::placeholder {
+    color: var(--colo-gray3);
+}
 .filter-select-head {
     cursor: pointer;
 }
@@ -380,6 +404,46 @@ a.phone {
     line-height: 18px;
     white-space: nowrap;
 }
+.primary-button.arrow,
+.primary-button.back,
+.primary-button.complete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.primary-button.complete::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    left: 10px;  
+    background-image: url(../images/icons/done-checkbox.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.primary-button.back::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;  
+    background-image: url(../images/icons/select-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(90deg);
+}
+.primary-button.arrow::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;  
+    background-image: url(../images/icons/select-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(-90deg);
+}
 .primary-button.fill {
     color: var(--color-white);
     border: 1px solid var(--color-green);
@@ -388,6 +452,88 @@ a.phone {
 .primary-button.bordered {
     border: 1px solid var(--color-green);
     background-color: var(--color-white);
+}
+.blue-button {
+    color: var(--color-blue);
+    border-radius: 100px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    line-height: 18px;   
+    border: 1px solid var(--color-blue);
+    background-color: var(--color-white);
+    white-space: nowrap;
+}
+.blue-button img {
+    width: 16px;
+    margin-right: 10px;
+}
+a.primary-link {
+    text-decoration: none;
+    color: var(--color-green);
+    transition: var(--transition);
+}
+a.primary-link.blue {
+    color: var(--color-blue);
+}
+a.primary-link:hover {
+    text-decoration: none;
+    color: var(--color-green-hover);
+}
+a.primary-link.blue:hover {
+    color: var(--color-blue);
+}
+input[type=radio],
+input[type=checkbox] {
+    display: none;
+}
+.primary-input-radio {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--colo-gray3);
+    cursor: pointer;
+}
+.primary-input-radio::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    display: block;
+    border-radius: 100%;
+    box-shadow: 0 0 0 2px var(--colo-gray3);
+    border: 3px solid var(--color-white);
+    background-color: var(--color-white);
+}
+input:checked + .primary-input-radio::before {
+    box-shadow: 0 0 0 2px var(--color-green);
+    background-color: var(--color-green);
+}
+input:checked + .primary-input-radio {
+    color: var(--color-green);
+}
+.primary-input-check {
+    cursor: pointer;
+}
+.primary-input-check::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--color-green);
+    background-color: var(--color-white);
+    background-image: url(../images/icons/done-checkbox.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+input:checked + .primary-input-check::before {
+    background-color: var(--color-green);
 }
 .favorite-button {
     border: 0;
@@ -405,6 +551,11 @@ a.phone {
     padding: 10px;
     background-color: var(--colo-gray6);
     width: fit-content;
+}
+.auth-block {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px;
 }
 
 

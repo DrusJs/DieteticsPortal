@@ -54,3 +54,18 @@ if (document.querySelector('.favorite-button')) {
         })
     })
 }
+
+function nextStep(el) {
+    let block = el.closest('.container')
+    block.classList.remove('d-flex')
+    block.classList.add('d-none')
+    block.nextElementSibling.classList.add('d-flex')
+    block.nextElementSibling.classList.remove('d-none')
+}
+function prevStep(el) {
+    let block = el.closest('.container')
+    block.classList.remove('d-flex')
+    block.classList.add('d-none')
+    block.previousElementSibling.classList.add('d-flex')
+    block.previousElementSibling.classList.remove('d-none')
+}
