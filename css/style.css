@@ -391,6 +391,12 @@ a.phone {
 .rating-block p {
     margin: 0;
 }
+.doc-item {
+    color: #E95656;
+    background-color: rgba(233, 86, 86, .1);
+    border-radius: 10px;
+    padding: 5px 15px 5px 10px;
+}
 .specialist-actions {
     border-radius: 15px;
     background-color: var(--colo-gray6);
