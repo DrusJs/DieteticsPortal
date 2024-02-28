@@ -569,7 +569,7 @@ input:checked + .primary-input-radio {
 }
 .primary-select-dropdown {
     position: absolute;
-    top: 30px;
+    top: 90px;
     left: 0;
     color: var(--color-green);
     list-style: none;
@@ -588,7 +588,7 @@ input:checked + .primary-input-radio {
 .primary-select-dropdown__item {
     cursor: pointer;
 }
-.primary-select.active .location-select-dropdown {
+.primary-select.active .primary-select-dropdown {
     pointer-events: all;
     opacity: 1;
     visibility: visible;
