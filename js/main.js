@@ -39,7 +39,7 @@ if (document.querySelector('.js-open-modal')) {
         })
     })
     document.querySelectorAll('.modal-wrapper').forEach(el=>{
-        el.addEventListener('click', (event)=>{
+        el.addEventListener('mousedown', (event)=>{
             if (event.target.classList.contains('modal-wrapper')) {
                 event.currentTarget.classList.remove('active')
                 document.body.classList.remove('no-scroll')
@@ -68,4 +68,33 @@ function prevStep(el) {
     block.classList.add('d-none')
     block.previousElementSibling.classList.add('d-flex')
     block.previousElementSibling.classList.remove('d-none')
+}
+
+if (document.querySelector('.review-scroll')) {
+    const slider = document.querySelector('.review-scroll')
+    let isDown = false
+    let startX
+    let scrollLeft
+    
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true
+      slider.classList.add('active')
+      startX = e.pageX - slider.offsetLeft
+      scrollLeft = slider.scrollLeft
+    });
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+      slider.classList.remove('active')
+    });
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+      slider.classList.remove('active')
+    });
+    slider.addEventListener('mousemove', (e) => {
+      if(!isDown) return
+      e.preventDefault()
+      const x = e.pageX - slider.offsetLeft
+      const walk = (x - startX);
+      slider.scrollLeft = scrollLeft - walk
+    })
 }
