@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="favicon.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Диетология</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="container round mt-4 pb-0">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="/" class="logo">
+                            <img src="images/icons/logo.svg" alt="">
+                        </a>
+                        <div class="location-select">
+                            <div class="location-select-head">
+                                <p class="location c-green">Санкт-петербург</p>
+                            </div>
+                            <ul class="location-select-dropdown">
+                                <li class="location-select-dropdown__item">Санкт-петербург</li>
+                                <li class="location-select-dropdown__item">Москва</li>
+                                <li class="location-select-dropdown__item">Екатеринбург</li>
+                            </ul>
+                        </div>
+                        <div class="header-action d-md-flex d-none align-items-center gap-3">
+                            <div class="d-flex flex-column justify-content-center align-items-end">
+                                <p class="text-desc c-gray m-0">Техническая поддержка</p>
+                                <a class="phone text-m c-green" href="tel:+88001111111">8 800 111 11 11</a>
+                            </div>
+                            <div class="header-action-basket d-flex justify-content-center align-items-center">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2202_1190)">
+                                    <path d="M14.6667 6.00001H11.4734L8.54669 1.62001C8.28002 1.22668 7.70002 1.22668 7.44002 1.62001L4.51335 6.00001H1.33335C0.966687 6.00001 0.666687 6.30001 0.666687 6.66668C0.666687 6.72668 0.673354 6.78668 0.693354 6.84668L2.38669 13.0267C2.54002 13.5867 3.05335 14 3.66669 14H12.3334C12.9467 14 13.46 13.5867 13.62 13.0267L15.3134 6.84668L15.3334 6.66668C15.3334 6.30001 15.0334 6.00001 14.6667 6.00001ZM7.99335 3.19335L9.86669 6.00001H6.12002L7.99335 3.19335ZM8.00002 11.3333C7.26669 11.3333 6.66669 10.7333 6.66669 10C6.66669 9.26668 7.26669 8.66668 8.00002 8.66668C8.73335 8.66668 9.33335 9.26668 9.33335 10C9.33335 10.7333 8.73335 11.3333 8.00002 11.3333Z" fill="#27AE60"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_2202_1190">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="basket-count c-green">+1</span>
+                            </div>
+                            <a href="auth.html" class="header-action-profile d-flex align-items-center gap-2 p-2">
+                                <p class="text-desc c-green m-0">Войти</p>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2202_1201)">
+                                        <path d="M7.19333 10.86C7.45333 11.12 7.87333 11.12 8.13333 10.86L10.5267 8.46667C10.7867 8.20667 10.7867 7.78667 10.5267 7.52667L8.13333 5.13333C7.87333 4.87333 7.45333 4.87333 7.19333 5.13333C6.93333 5.39333 6.93333 5.81333 7.19333 6.07333L8.44667 7.33333H2.66667C2.3 7.33333 2 7.63333 2 8C2 8.36667 2.3 8.66667 2.66667 8.66667H8.44667L7.19333 9.92C6.93333 10.18 6.94 10.6067 7.19333 10.86ZM12.6667 2H3.33333C2.59333 2 2 2.6 2 3.33333V5.33333C2 5.7 2.3 6 2.66667 6C3.03333 6 3.33333 5.7 3.33333 5.33333V4C3.33333 3.63333 3.63333 3.33333 4 3.33333H12C12.3667 3.33333 12.6667 3.63333 12.6667 4V12C12.6667 12.3667 12.3667 12.6667 12 12.6667H4C3.63333 12.6667 3.33333 12.3667 3.33333 12V10.6667C3.33333 10.3 3.03333 10 2.66667 10C2.3 10 2 10.3 2 10.6667V12.6667C2 13.4 2.6 14 3.33333 14H12.6667C13.4 14 14 13.4 14 12.6667V3.33333C14 2.6 13.4 2 12.6667 2Z" fill="#27AE60"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2202_1201">
+                                            <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="burger-button d-md-none d-flex align-items-center justify-content-center">
+                        </div>
+                    </div>
+                    <nav>
+                        <ul class="navigation w-100 d-flex mb-0 mt-4 gap-3">
+                            <li class="navigation__item active">Выбор специалиста</li>
+                            <li class="navigation__item">Магазин</li>
+                            <li class="navigation__item">Другие услуги</li>
+                            <li class="navigation__item">О сервисе</li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <main class="main">
+                <div class="container d-flex px-0 my-3 gap-3">
+                    <div class="profile-menu">
+                        <ul class="profile-menu-list">
+                            <li class="profile-menu-list__item d-flex align-items-center gap-2 active">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_205_8679)">
+                                    <path d="M6.99998 6.99998C8.28915 6.99998 9.33331 5.95581 9.33331 4.66665C9.33331 3.37748 8.28915 2.33331 6.99998 2.33331C5.71081 2.33331 4.66665 3.37748 4.66665 4.66665C4.66665 5.95581 5.71081 6.99998 6.99998 6.99998ZM6.99998 8.16665C5.44248 8.16665 2.33331 8.94831 2.33331 10.5V11.0833C2.33331 11.4041 2.59581 11.6666 2.91665 11.6666H11.0833C11.4041 11.6666 11.6666 11.4041 11.6666 11.0833V10.5C11.6666 8.94831 8.55748 8.16665 6.99998 8.16665Z" fill="#BDBDBD"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_205_8679">
+                                    <rect width="14" height="14" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                Личные данные
+                            </li>
+                            <li class="profile-menu-list__item d-flex align-items-center gap-2">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2277_3329)">
+                                    <path d="M14.9999 1.66675H4.99992C4.08325 1.66675 3.33325 2.41675 3.33325 3.33341V16.6667C3.33325 17.5834 4.08325 18.3334 4.99992 18.3334H14.9999C15.9166 18.3334 16.6666 17.5834 16.6666 16.6667V3.33341C16.6666 2.41675 15.9166 1.66675 14.9999 1.66675ZM4.99992 3.33341H9.16659V10.0001L7.08325 8.75008L4.99992 10.0001V3.33341Z" fill="#BDBDBD"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_2277_3329">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                    
+                                Мои консультации
+                            </li>
+                            <li class="profile-menu-list__item d-flex align-items-center gap-2">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2277_3335)">
+                                    <path d="M13.7501 10.0001C14.9001 10.0001 15.8251 9.06675 15.8251 7.91675C15.8251 6.76675 14.9001 5.83341 13.7501 5.83341C12.6001 5.83341 11.6667 6.76675 11.6667 7.91675C11.6667 9.06675 12.6001 10.0001 13.7501 10.0001ZM7.50008 9.16675C8.88342 9.16675 9.99175 8.05008 9.99175 6.66675C9.99175 5.28341 8.88342 4.16675 7.50008 4.16675C6.11675 4.16675 5.00008 5.28341 5.00008 6.66675C5.00008 8.05008 6.11675 9.16675 7.50008 9.16675ZM13.7501 11.6667C12.2251 11.6667 9.16675 12.4334 9.16675 13.9584V15.0001C9.16675 15.4584 9.54175 15.8334 10.0001 15.8334H17.5001C17.9584 15.8334 18.3334 15.4584 18.3334 15.0001V13.9584C18.3334 12.4334 15.2751 11.6667 13.7501 11.6667ZM7.50008 10.8334C5.55841 10.8334 1.66675 11.8084 1.66675 13.7501V15.0001C1.66675 15.4584 2.04175 15.8334 2.50008 15.8334H7.50008V13.9584C7.50008 13.2501 7.77508 12.0084 9.47508 11.0667C8.75008 10.9167 8.05008 10.8334 7.50008 10.8334Z" fill="#BDBDBD"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_2277_3335">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                    
+                                Мои пациенты                                   
+                            </li>
+                        </ul>
+                        <div class="profile-calendar hide-scroll d-flex flex-column align-items-centerc">
+                            <p class="date text-s">12 янв, вторник</p>
+                            <div class="calendar-item w-100 d-flex justify-content-between">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <p class="calendar-item__name text-desc">Сергей Горякин</p>
+                                    <p class="calendar-item__type text-s">Консультация</p>
+                                </div>
+                                <p class="calendar-item__time text-desc">12:00</p>
+                            </div>
+                            <div class="calendar-item w-100 d-flex justify-content-between">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <p class="calendar-item__name text-desc">Сергей Горякин</p>
+                                    <p class="calendar-item__type text-s">Проверка</p>
+                                </div>
+                                <p class="calendar-item__time text-desc">15:00</p>
+                            </div>
+                            <p class="date text-s">17 янв, воскресенье</p>
+                            <div class="calendar-item w-100 d-flex justify-content-between">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <p class="calendar-item__name text-desc">Сергей Горякин</p>
+                                    <p class="calendar-item__type text-s">Консультация</p>
+                                </div>
+                                <p class="calendar-item__time text-desc">12:00</p>
+                            </div>
+                            <div class="calendar-item w-100 d-flex justify-content-between">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <p class="calendar-item__name text-desc">Сергей Горякин</p>
+                                    <p class="calendar-item__type text-s">Проверка</p>
+                                </div>
+                                <p class="calendar-item__time text-desc">15:00</p>
+                            </div>
+                            <p class="date text-s">19 янв, вторник</p>
+                            <div class="calendar-item w-100 d-flex justify-content-between">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <p class="calendar-item__name text-desc">Сергей Горякин</p>
+                                    <p class="calendar-item__type text-s">Консультация</p>
+                                </div>
+                                <p class="calendar-item__time text-desc">12:00</p>
+                            </div>
+                            <div class="calendar-item w-100 d-flex justify-content-between">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <p class="calendar-item__name text-desc">Сергей Горякин</p>
+                                    <p class="calendar-item__type text-s">Проверка</p>
+                                </div>
+                                <p class="calendar-item__time text-desc">15:00</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="profile-container d-flex flex-column gap-3">
+                        <div class="profile-main d-flex gap-3">
+                            <div class="profile-photo">
+                                <img src="images/photo-spec1.jpg" alt="">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h1 class="title">Сергей Горякин</h1>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <div class="profile-pin d-flex align-items-center gap-2">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_205_8679)">
+                                            <path d="M6.99998 6.99998C8.28915 6.99998 9.33331 5.95581 9.33331 4.66665C9.33331 3.37748 8.28915 2.33331 6.99998 2.33331C5.71081 2.33331 4.66665 3.37748 4.66665 4.66665C4.66665 5.95581 5.71081 6.99998 6.99998 6.99998ZM6.99998 8.16665C5.44248 8.16665 2.33331 8.94831 2.33331 10.5V11.0833C2.33331 11.4041 2.59581 11.6666 2.91665 11.6666H11.0833C11.4041 11.6666 11.6666 11.4041 11.6666 11.0833V10.5C11.6666 8.94831 8.55748 8.16665 6.99998 8.16665Z" fill="#27AE60"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_205_8679">
+                                            <rect width="14" height="14" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                            
+                                        <span>Специалист</span>
+                                    </div>
+                                    <div class="profile-pin d-flex align-items-center gap-2">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_205_8682)">
+                                            <path d="M7.00002 1.16669C4.74252 1.16669 2.91669 2.99252 2.91669 5.25002C2.91669 7.68252 5.49502 11.0367 6.55669 12.3142C6.79002 12.5942 7.21585 12.5942 7.44919 12.3142C8.50502 11.0367 11.0834 7.68252 11.0834 5.25002C11.0834 2.99252 9.25752 1.16669 7.00002 1.16669ZM7.00002 6.70835C6.19502 6.70835 5.54169 6.05502 5.54169 5.25002C5.54169 4.44502 6.19502 3.79169 7.00002 3.79169C7.80502 3.79169 8.45835 4.44502 8.45835 5.25002C8.45835 6.05502 7.80502 6.70835 7.00002 6.70835Z" fill="#27AE60"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_205_8682">
+                                            <rect width="14" height="14" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span>Россия, Астрахань</span>
+                                    </div>
+                                    <div class="profile-pin d-flex align-items-center gap-2">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_2218_448)">
+                                            <path d="M11.6667 2.33334H2.33332C1.69166 2.33334 1.17249 2.85834 1.17249 3.5L1.16666 10.5C1.16666 11.1417 1.69166 11.6667 2.33332 11.6667H11.6667C12.3083 11.6667 12.8333 11.1417 12.8333 10.5V3.5C12.8333 2.85834 12.3083 2.33334 11.6667 2.33334ZM11.4333 4.8125L7.30916 7.39084C7.12249 7.5075 6.87749 7.5075 6.69082 7.39084L2.56666 4.8125C2.42082 4.71917 2.33332 4.56167 2.33332 4.3925C2.33332 4.00167 2.75916 3.76834 3.09166 3.9725L6.99999 6.41667L10.9083 3.9725C11.2408 3.76834 11.6667 4.00167 11.6667 4.3925C11.6667 4.56167 11.5792 4.71917 11.4333 4.8125Z" fill="#27AE60"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_2218_448">
+                                            <rect width="14" height="14" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                            
+                                        <span>sergey@mail.ru</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="primary-select online-select">
+                                <div class="primary-select-head">
+                                    <p class="primary-select-head__value">Онлайн</p>
+                                </div>
+                                <ul class="primary-select-dropdown">
+                                    <li class="primary-select-dropdown__item">Онлайн</li>
+                                    <li class="primary-select-dropdown__item">Оффлайн</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h2 class="title c-green">Личные данные</h2>
+                            <div class="d-flex gap-3 flex-wrap align-items-end">
+                                <div class="d-flex flex-column gap-1">
+                                    <p class="text primary-input-label m-0">Ваше ФИО</p>
+                                    <input type="text" class="primary-input" placeholder="Иванонв Иван Иванович">
+                                </div>
+                                <div class="d-flex flex-column gap-1">
+                                    <p class="text primary-input-label m-0">Телефон</p>
+                                    <input type="text" class="primary-input" placeholder="8 (800) 1110-22-22">
+                                </div>
+                                <div class="d-flex flex-column gap-1">
+                                    <p class="text primary-input-label m-0">СНИЛС</p>
+                                    <input type="text" class="primary-input" placeholder="0000 10110101">
+                                </div>
+                                <div class="d-flex flex-column gap-1">
+                                    <p class="text primary-input-label m-0">Электронная почта</p>
+                                    <input type="email" class="primary-input" placeholder="ergey@mail.ru">
+                                </div>
+                                <div class="d-flex flex-column gap-1">
+                                    <p class="text primary-input-label m-0">Дата рождения</p>
+                                    <input type="text" class="primary-input" placeholder="10.10.1990">
+                                </div>
+                                <div class="d-flex gap-3 mb-2">
+                                    <input type="radio" name="radio-gender" id="woman">
+                                    <label for="woman" class="primary-input-radio">Женщина</label>
+                                    <input type="radio" name="radio-gender" id="man">
+                                    <label for="man" class="primary-input-radio">Мужчина</label>
+                                </div>
+                            </div>
+                            <div class="photo-file-item d-flex gap-3 mt-3">
+                                <img class="photo" src="images/photo-spec1.jpg" alt="">
+                                <span class="name">аватарка.png</span>
+                                <button class="remove">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_111_6827)">
+                                        <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V9C18 7.9 17.1 7 16 7H8C6.9 7 6 7.9 6 9V19ZM9 9H15C15.55 9 16 9.45 16 10V18C16 18.55 15.55 19 15 19H9C8.45 19 8 18.55 8 18V10C8 9.45 8.45 9 9 9ZM15.5 4L14.79 3.29C14.61 3.11 14.35 3 14.09 3H9.91C9.65 3 9.39 3.11 9.21 3.29L8.5 4H6C5.45 4 5 4.45 5 5C5 5.55 5.45 6 6 6H18C18.55 6 19 5.55 19 5C19 4.45 18.55 4 18 4H15.5Z" fill="#27AE60"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_111_6827">
+                                        <rect width="24" height="24" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>                                        
+                                </button>
+                            </div>
+                            <hr>
+                            <h2 class="title c-green">Образование</h2>
+                            <div class="d-flex flex-column gap-3">
+                                <div class="work-section">
+                                    <div class="d-flex gap-3">
+                                        <div class="d-flex flex-column gap-3">
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Образование</p>
+                                                <input type="text" class="primary-input" placeholder="Высшее">
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Учебное заведение</p>
+                                                <input type="text" class="primary-input" placeholder="МГУ">
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Специальность</p>
+                                                <input type="text" class="primary-input" placeholder="Название">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Год окончания</p>
+                                                <input type="text" class="primary-input" placeholder="2010">
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Данные об аккредитации</p>
+                                                <input type="text" class="primary-input" placeholder="0000 10110101">
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Данные по ординатуре</p>
+                                                <input type="text" class="primary-input" placeholder="0000 10110101">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Данные по интернатуре</p>
+                                                <input type="text" class="primary-input" placeholder="0000 10110101">
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Повышение квалификации</p>
+                                                <input type="text" class="primary-input" placeholder="0000 10110101">
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Специализация</p>
+                                                <input type="text" class="primary-input" placeholder="0000 10110101">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="remove mt-3">
+                                        Удалить место работы
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_111_6827)">
+                                            <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V9C18 7.9 17.1 7 16 7H8C6.9 7 6 7.9 6 9V19ZM9 9H15C15.55 9 16 9.45 16 10V18C16 18.55 15.55 19 15 19H9C8.45 19 8 18.55 8 18V10C8 9.45 8.45 9 9 9ZM15.5 4L14.79 3.29C14.61 3.11 14.35 3 14.09 3H9.91C9.65 3 9.39 3.11 9.21 3.29L8.5 4H6C5.45 4 5 4.45 5 5C5 5.55 5.45 6 6 6H18C18.55 6 19 5.55 19 5C19 4.45 18.55 4 18 4H15.5Z" fill="#BDBDBD"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_111_6827">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg> 
+                                    </button>
+                                </div>
+                                <div class="work-section">
+                                    <div class="d-flex gap-3">
+                                        <div class="d-flex flex-column gap-3">
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Образование</p>
+                                                <input type="text" class="primary-input" placeholder="Высшее">
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Учебное заведение</p>
+                                                <input type="text" class="primary-input" placeholder="МГУ">
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Специальность</p>
+                                                <input type="text" class="primary-input" placeholder="Название">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Год окончания</p>
+                                                <input type="text" class="primary-input" placeholder="2010">
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Данные об аккредитации</p>
+                                                <input type="text" class="primary-input" placeholder="0000 10110101">
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Данные по ординатуре</p>
+                                                <input type="text" class="primary-input" placeholder="0000 10110101">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Данные по интернатуре</p>
+                                                <input type="text" class="primary-input" placeholder="0000 10110101">
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Повышение квалификации</p>
+                                                <input type="text" class="primary-input" placeholder="0000 10110101">
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <p class="text primary-input-label m-0">Специализация</p>
+                                                <input type="text" class="primary-input" placeholder="0000 10110101">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="remove mt-3">
+                                        Удалить место работы
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_111_6827)">
+                                            <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V9C18 7.9 17.1 7 16 7H8C6.9 7 6 7.9 6 9V19ZM9 9H15C15.55 9 16 9.45 16 10V18C16 18.55 15.55 19 15 19H9C8.45 19 8 18.55 8 18V10C8 9.45 8.45 9 9 9ZM15.5 4L14.79 3.29C14.61 3.11 14.35 3 14.09 3H9.91C9.65 3 9.39 3.11 9.21 3.29L8.5 4H6C5.45 4 5 4.45 5 5C5 5.55 5.45 6 6 6H18C18.55 6 19 5.55 19 5C19 4.45 18.55 4 18 4H15.5Z" fill="#BDBDBD"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_111_6827">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg> 
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="primary-button empty mt-2">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2277_4307)">
+                                    <path d="M11.9999 8.66683H8.66659V12.0002C8.66659 12.3668 8.36659 12.6668 7.99992 12.6668C7.63325 12.6668 7.33325 12.3668 7.33325 12.0002V8.66683H3.99992C3.63325 8.66683 3.33325 8.36683 3.33325 8.00016C3.33325 7.6335 3.63325 7.3335 3.99992 7.3335H7.33325V4.00016C7.33325 3.6335 7.63325 3.3335 7.99992 3.3335C8.36659 3.3335 8.66659 3.6335 8.66659 4.00016V7.3335H11.9999C12.3666 7.3335 12.6666 7.6335 12.6666 8.00016C12.6666 8.36683 12.3666 8.66683 11.9999 8.66683Z" fill="#27AE60"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_2277_4307">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                    
+                                Добавить еще образование
+                            </button>
+                            <hr>
+                            <h2 class="title c-green">О работе</h2>
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="d-flex flex-column">
+                                    <div class="d-flex flex-column gap-1">
+                                        <p class="text primary-input-label m-0">Стаж работы</p>
+                                        <input type="text" class="primary-input" placeholder="5 лет">
+                                    </div>
+                                    <div class="d-flex flex-column gap-1">
+                                        <p class="text primary-input-label m-0">Предыдущие места работы</p>
+                                        <input type="text" class="primary-input" placeholder="Название">
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <p class="text primary-input-label mb-0">Краткая информация о себе</p>
+                                    <textarea class="primary-input"  placeholder="Пару слов о себе..."></textarea>
+                                </div>
+                            </div>
+                            <button class="primary-button empty mt-2">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2277_4307)">
+                                    <path d="M11.9999 8.66683H8.66659V12.0002C8.66659 12.3668 8.36659 12.6668 7.99992 12.6668C7.63325 12.6668 7.33325 12.3668 7.33325 12.0002V8.66683H3.99992C3.63325 8.66683 3.33325 8.36683 3.33325 8.00016C3.33325 7.6335 3.63325 7.3335 3.99992 7.3335H7.33325V4.00016C7.33325 3.6335 7.63325 3.3335 7.99992 3.3335C8.36659 3.3335 8.66659 3.6335 8.66659 4.00016V7.3335H11.9999C12.3666 7.3335 12.6666 7.6335 12.6666 8.00016C12.6666 8.36683 12.3666 8.66683 11.9999 8.66683Z" fill="#27AE60"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_2277_4307">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                    
+                                Добавить еще место работы
+                            </button>
+                            <hr>
+                            <h2 class="title c-green">Документы</h2>
+                            <div class="d-flex gap-3 mt-3">
+                                <div class="doc-item d-flex align-items-center gap-2">
+                                    <img src="images/icons/document-icon.svg" alt="">
+                                    <span class="name">Диплом_1</span>
+                                    <span class="size">(2.5 МБ)</span>
+                                    <button class="remove">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_111_6827)">
+                                            <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V9C18 7.9 17.1 7 16 7H8C6.9 7 6 7.9 6 9V19ZM9 9H15C15.55 9 16 9.45 16 10V18C16 18.55 15.55 19 15 19H9C8.45 19 8 18.55 8 18V10C8 9.45 8.45 9 9 9ZM15.5 4L14.79 3.29C14.61 3.11 14.35 3 14.09 3H9.91C9.65 3 9.39 3.11 9.21 3.29L8.5 4H6C5.45 4 5 4.45 5 5C5 5.55 5.45 6 6 6H18C18.55 6 19 5.55 19 5C19 4.45 18.55 4 18 4H15.5Z" fill="#EB5757"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_111_6827">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg> 
+                                    </button>
+                                </div>
+                                <div class="doc-item d-flex align-items-center gap-2">
+                                    <img src="images/icons/document-icon.svg" alt="">
+                                    <span class="name">Сертификат</span>
+                                    <span class="size">(2.5 МБ)</span>
+                                    <button class="remove">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_111_6827)">
+                                            <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V9C18 7.9 17.1 7 16 7H8C6.9 7 6 7.9 6 9V19ZM9 9H15C15.55 9 16 9.45 16 10V18C16 18.55 15.55 19 15 19H9C8.45 19 8 18.55 8 18V10C8 9.45 8.45 9 9 9ZM15.5 4L14.79 3.29C14.61 3.11 14.35 3 14.09 3H9.91C9.65 3 9.39 3.11 9.21 3.29L8.5 4H6C5.45 4 5 4.45 5 5C5 5.55 5.45 6 6 6H18C18.55 6 19 5.55 19 5C19 4.45 18.55 4 18 4H15.5Z" fill="#EB5757"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_111_6827">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                         
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="primary-button empty mt-2">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2277_1962)">
+                                    <path d="M11.0001 4.49977V11.5531C11.0001 12.9464 9.98008 14.1864 8.59342 14.3198C7.00008 14.4731 5.66675 13.2264 5.66675 11.6664V3.42644C5.66675 2.55311 6.29341 1.75977 7.16008 1.67311C8.16008 1.57311 9.00008 2.35311 9.00008 3.33311V10.3331C9.00008 10.6998 8.70008 10.9998 8.33341 10.9998C7.96675 10.9998 7.66675 10.6998 7.66675 10.3331V4.49977C7.66675 4.22644 7.44008 3.99977 7.16675 3.99977C6.89341 3.99977 6.66675 4.22644 6.66675 4.49977V10.2398C6.66675 11.1131 7.29341 11.9064 8.16008 11.9931C9.16008 12.0931 10.0001 11.3131 10.0001 10.3331V3.44644C10.0001 2.05311 8.98008 0.813105 7.59342 0.679772C6.00675 0.526438 4.66675 1.77311 4.66675 3.33311V11.5131C4.66675 13.4264 6.06675 15.1398 7.97341 15.3198C10.1667 15.5198 12.0001 13.8131 12.0001 11.6664V4.49977C12.0001 4.22644 11.7734 3.99977 11.5001 3.99977C11.2267 3.99977 11.0001 4.22644 11.0001 4.49977Z" fill="#27AE60"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_2277_1962">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                                                     
+                                Выбрать диплом, сертификат
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <footer class="footer">
+                <div class="container round">
+                    <div class="d-flex justify-content-between">
+                        <ul class="navigation d-flex mb-0 gap-3">
+                            <li class="navigation__item">Выбор специалиста</li>
+                            <li class="navigation__item">Магазин</li>
+                            <li class="navigation__item">Другие услуги</li>
+                            <li class="navigation__item">О сервисе</li>
+                        </ul>
+                        <div class="d-flex flex-column justify-content-center align-items-end">
+                            <p class="text-desc c-gray m-0">Техническая поддержка</p>
+                            <a class="phone text-m c-green" href="tel:+88001111111">8 800 111 11 11</a>
+                        </div>
+                    </div>
+                    <p class="text-s m-0">© ООО «ПорталДиетология», г. Москва, ул. Ленина, д. 8.</p>
+                    <p class="text-s m-0">Лицензия на медицинскую деятельность Л041-01137-77/00325371, 2015–2024</p>
+                    <p class="text-s m-0">Все права защищены. Условия использования сервиса</p>
+                </div>
+            </footer>
+        </div>
+    <script src="js/main.js" type="text/javascript"></script>
+    </body>
+</html>

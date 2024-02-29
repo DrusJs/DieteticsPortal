@@ -14,8 +14,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-
 :root {
     --color-white: #FFFFFF;
     --colo-gray1: #333333;
@@ -42,6 +40,10 @@
     --font-primary: "Manrope";
     --transition: 260ms ease-out;
     --box-shadow-primary: 0px 8px 32px rgba(12, 16, 24, .12)
+}
+
+p {
+    margin-bottom: 0;
 }
 
 body {
@@ -309,9 +311,15 @@ a.phone {
 .primary-input {
     padding: 11px 15px 10px 15px;
     width: 100%;
+    border-radius: 10px;
     background-color: var(--colo-gray6);
     border: none;
     outline: none;
+    resize: none;
+}
+.primary-input-label {
+    color: var(--colo-gray3);
+    font-size: 14px;
 }
 .primary-input::placeholder {
     color: var(--colo-gray3);
@@ -397,6 +405,10 @@ a.phone {
     border-radius: 10px;
     padding: 5px 15px 5px 10px;
 }
+.doc-item .remove {
+    background-color: transparent;
+    border: none;
+}
 .specialist-actions {
     border-radius: 15px;
     background-color: var(--colo-gray6);
@@ -409,6 +421,11 @@ a.phone {
     height: 36px;
     line-height: 18px;
     white-space: nowrap;
+}
+.primary-button.empty {
+    border: none;
+    background-color: transparent;
+    padding: 0;
 }
 .primary-button.arrow,
 .primary-button.back,
@@ -542,6 +559,16 @@ input:checked + .primary-input-radio {
     position: relative;
     width: fit-content;
 }
+.primary-select.online-select  {
+    margin-left: auto;
+    width: fit-content;
+}
+.primary-select.online-select .primary-select-head {
+    padding: 6px 10px;
+}
+.primary-select.online-select .primary-select-dropdown {
+    top: 46px;
+}
 .primary-select-head {
     padding: 10px 15px;
     border: 1px solid var(--color-green);
@@ -583,6 +610,7 @@ input:checked + .primary-input-radio {
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
+    z-index: 2;
     transition: var(--transition);
 }
 .primary-select-dropdown__item {
@@ -714,6 +742,155 @@ input:checked + .primary-input-check::before {
     background-color: var(--color-white);
 }
 
+.profile-menu-list {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 10px;
+    list-style: none;
+    min-width: 300px;
+}
+.profile-calendar {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 10px;
+}
+.profile-calendar .calendar {
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-primary);
+}
+.profile-calendar .calendar td,
+.profile-calendar .calendar th {
+    padding: 3px 7px 3px 7px;
+}
+.profile-calendar .calendar th {
+    color: var(--colo-gray3);
+}
+.profile-calendar .calendar td {
+    position: relative;
+}
+.profile-calendar .calendar td.active {
+    background-color: var(--color-green-light);
+    border-radius: 5px;
+    color: var(--color-green);
+}
+.profile-calendar .calendar td.pointed::before {
+    content: '';
+    width: 2px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 19px;
+    background-color: var(--color-green);
+}
+.profile-menu-list__item {
+    padding: 15px 10px;
+    border-radius: 10px;
+    width: 100%;
+    color: var(--colo-gray3);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.profile-menu-list__item path {
+    transition: var(--transition);
+}
+.profile-menu-list__item:hover {
+    color: var(--color-green);
+}
+.profile-menu-list__item:hover path {
+    fill: var(--color-green);
+}
+.profile-menu-list__item.active {
+    background-color: var(--color-green-light);
+    color: var(--color-green);
+}
+.profile-menu-list__item.active path {
+    fill: var(--color-green);
+}
+.profile-main,
+.profile-info {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 20px;
+}
+.profile-photo {
+    overflow: hidden;
+    border-radius: 10px;
+    width: 130px;
+    height: 130px;
+}
+.profile-photo img {
+    width: 130px;
+    object-fit: cover;
+}
+.profile-pin {
+    border-radius: 10px;
+    background-color: var(--color-green-light);
+    padding: 2px 15px;
+    color: var(--color-green);
+    white-space: nowrap;
+}
+.photo-file-item {
+    padding: 5px 10px;
+    background-color: var(--color-green-light);
+    border-radius: 10px;
+    width: fit-content;
+    color: var(--color-green);
+}
+.photo-file-item .photo {
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+}
+.photo-file-item .remove {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+}
+.work-section {
+    background-color: var(--colo-gray6);
+    padding: 15px;
+    border-radius: 10px;
+}
+.work-section .primary-input {
+    background-color: var(--color-white);
+}
+.work-section .remove {
+    width: fit-content;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--colo-gray3);
+}
+.calendar-item {
+    border-left: 2px solid var(--colo-gray4);
+    padding-left: 10px;
+}
+.calendar-item__name {
+    
+}
+.calendar-item__type {
+    color: var(--colo-gray3);
+}
+.calendar-item__time {
+    color: var(--color-green)
+}
+.profile-calendar.hide-scroll {
+    max-height: 237px;
+    gap: 10px;
+    overflow-y: scroll;
+}
+.profile-calendar .date {
+    text-align: center;
+    color: var(--colo-gray3);
+}
 
 @media (max-width: 787px) {
     h1.title {

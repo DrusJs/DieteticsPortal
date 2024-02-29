@@ -10,6 +10,21 @@ if (document.querySelector('.location-select-head')) {
         })
     })
 }
+if (document.querySelector('.primary-select-head')) {
+    document.querySelectorAll('.primary-select-head').forEach(el=>{
+        let select = el.closest('.primary-select')
+        el.addEventListener('click', (event)=>{
+            event.currentTarget.parentElement.classList.toggle('active')
+        })
+        select.querySelectorAll('.primary-select-dropdown__item').forEach((item)=>{
+            item.addEventListener('click', (event)=>{            
+                select.classList.remove('active')
+                select.querySelector('.primary-select-head__value').innerHTML = event.currentTarget.innerHTML
+            })
+        })
+    })
+
+}
 
 if (document.querySelector('.js-swap-active')) {
     document.querySelectorAll('.js-swap-active').forEach(container=>{
