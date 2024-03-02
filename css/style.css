@@ -319,6 +319,7 @@ a.phone {
     width: 100%;
     border-radius: 10px;
     background-color: var(--colo-gray6);
+    color: var(--colo-gray3);
     border: none;
     outline: none;
     resize: none;
@@ -480,7 +481,7 @@ a.phone {
 }
 .primary-button.bordered {
     border: 1px solid var(--color-green);
-    background-color: var(--color-white);
+    background-color: transparent;
 }
 .blue-button {
     color: var(--color-blue);
@@ -544,6 +545,7 @@ input:checked + .primary-input-radio {
 }
 .primary-input-check {
     cursor: pointer;
+    color: var(--colo-gray3);
 }
 .primary-input-check::before {
     content: '';
@@ -554,7 +556,7 @@ input:checked + .primary-input-radio {
     top: 3px;
     margin-right: 10px;
     border-radius: 4px;
-    border: 1px solid var(--color-green);
+    border: 1px solid var(--colo-gray3);
     background-color: var(--color-white);
     background-image: url(../images/icons/done-checkbox.svg);
     background-position: center center;
@@ -680,6 +682,10 @@ input:checked + .dot-checkbox .checkmark::after {
 }
 input:checked + .primary-input-check::before {
     background-color: var(--color-green);
+    border: 1px solid var(--color-green);
+}
+input:checked + .primary-input-check {
+    color: var(--color-green);
 }
 .review-scroll {
     overflow-x: scroll;
@@ -729,10 +735,13 @@ input:checked + .primary-input-check::before {
     margin-left: auto;
 }
 .favorite-button path {
+    fill: transparent;
+    stroke: var(--colo-gray4);
     transition: var(--transition);
 }
 .favorite-button.active path {
-    fill: var(--colo-gray1);
+    fill: var(--color-red);
+    stroke: var(--color-red);
 }
 .rating-block {
     border-radius: 5px;
@@ -750,13 +759,41 @@ input:checked + .primary-input-check::before {
     border-radius: 15px;
     background-color: var(--color-white);
 }
-
+.profile-menu {
+    max-width: 330px;
+}
 .profile-menu-list {
     background-color: var(--color-white);
     border-radius: 10px;
     padding: 10px;
     list-style: none;
     min-width: 300px;
+}
+
+.profile-menu-list__item {
+    padding: 15px 10px;
+    border-radius: 10px;
+    width: 100%;
+    color: var(--colo-gray3);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.profile-menu-list__item path {
+    transition: var(--transition);
+}
+.profile-menu-list__item:hover {
+    color: var(--color-green);
+}
+.profile-menu-list__item:hover path {
+    fill: var(--color-green);
+}
+.profile-menu-list__item.active {
+    background-color: var(--color-green-light);
+    color: var(--color-green);
+}
+.profile-menu-list__item.active path {
+    fill: var(--color-green);
 }
 .profile-calendar {
     background-color: var(--color-white);
@@ -793,33 +830,9 @@ input:checked + .primary-input-check::before {
     left: 19px;
     background-color: var(--color-green);
 }
-.profile-menu-list__item {
-    padding: 15px 10px;
-    border-radius: 10px;
-    width: 100%;
-    color: var(--colo-gray3);
-    white-space: nowrap;
-    cursor: pointer;
-    transition: var(--transition);
-}
-.profile-menu-list__item path {
-    transition: var(--transition);
-}
-.profile-menu-list__item:hover {
-    color: var(--color-green);
-}
-.profile-menu-list__item:hover path {
-    fill: var(--color-green);
-}
-.profile-menu-list__item.active {
-    background-color: var(--color-green-light);
-    color: var(--color-green);
-}
-.profile-menu-list__item.active path {
-    fill: var(--color-green);
-}
 .profile-main,
-.profile-info {
+.profile-info,
+.chat-container {
     background-color: var(--color-white);
     border-radius: 10px;
     padding: 20px;
@@ -840,6 +853,15 @@ input:checked + .primary-input-check::before {
     padding: 2px 15px;
     color: var(--color-green);
     white-space: nowrap;
+}
+.balance-container {
+    width: fit-content;
+    margin-left: auto;
+    text-align: right;
+}
+.profile-balance {
+    border: none;
+    background-color: transparent;
 }
 .photo-file-item {
     padding: 5px 10px;
@@ -1006,6 +1028,32 @@ input:checked + .primary-input-check::before {
     width: 36px;
     height: 36px;
     border-radius: 36px;
+}
+.chat-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--colo-gray3);
+}
+.chat-header .name {
+    line-height: 1;
+}
+.chat-photo {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+.chat-photo img {
+    width: 50px;
+    object-fit: cover;
+}
+.message {
+    width: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--color-green-light);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 @media (max-width: 787px) {
     h1.title, .modal-title {

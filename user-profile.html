@@ -192,7 +192,7 @@
                         </div>
                     </div>
                     <div class="profile-container d-flex flex-column gap-3">
-                        <div class="profile-main d-flex gap-3">
+                        <div class="profile-main d-flex gap-3 align-items-start">
                             <div class="profile-photo">
                                 <img src="images/profile-photo.jpg" alt="">
                             </div>
@@ -227,12 +227,23 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex">
+                            <div class="balance-container d-flex align-items-center gap-3">
                                 <div class="d-flex flex-column">
-                                    <p class="text">Ваш баланс:</p>
-                                    <p class="balance">0 <span>руб.</span></p>
+                                    <p class="text-s c-gray">Ваш баланс:</p>
+                                    <p class="balance-value text-l c-green"><b>0 <span>руб.</span></b></p>
                                 </div>
-                                <button class="profile-balance"></button>
+                                <button class="profile-balance">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2277_4307)">
+                                        <path d="M11.9999 8.66683H8.66659V12.0002C8.66659 12.3668 8.36659 12.6668 7.99992 12.6668C7.63325 12.6668 7.33325 12.3668 7.33325 12.0002V8.66683H3.99992C3.63325 8.66683 3.33325 8.36683 3.33325 8.00016C3.33325 7.6335 3.63325 7.3335 3.99992 7.3335H7.33325V4.00016C7.33325 3.6335 7.63325 3.3335 7.99992 3.3335C8.36659 3.3335 8.66659 3.6335 8.66659 4.00016V7.3335H11.9999C12.3666 7.3335 12.6666 7.6335 12.6666 8.00016C12.6666 8.36683 12.3666 8.66683 11.9999 8.66683Z" fill="#27AE60"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_2277_4307">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg> 
+                                </button>
                             </div>
                         </div>
                         <div class="profile-info">
