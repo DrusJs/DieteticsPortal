@@ -39,6 +39,42 @@ if (document.querySelector('.js-swap-active')) {
         })
     })
 }
+if (document.querySelector('.js-swap-table')) {
+    let elements = Array.from(document.querySelector('.js-swap-table').children)
+    let tabs = Array.from(document.querySelector('.tables-tabs').children)
+    elements.forEach(item=>{
+        item.addEventListener('click', (event)=>{
+            if (!event.currentTarget.classList.contains('active')) {
+                event.currentTarget.parentElement.querySelector('.active').classList.remove('active')
+                event.currentTarget.classList.add('active')
+                if (document.querySelector('.tables-tabs .active-table')) {
+                    document.querySelector('.tables-tabs .active-table').classList.remove('active-table')
+                }
+                tabs[+event.currentTarget.dataset.table].classList.add('active-table')
+            }
+        })
+    })
+}
+if (document.querySelector('.profile-menu-list')) {
+    let elements = Array.from(document.querySelector('.profile-menu-list').children)
+    let tabs = document.querySelectorAll('.profile-container')
+    elements.forEach(el=>{
+        el.addEventListener('click', (event)=>{
+            if (!event.currentTarget.classList.contains('active')) {
+                event.currentTarget.parentElement.querySelector('.active').classList.remove('active')
+                event.currentTarget.classList.add('active')
+                if (document.querySelector('.profile-container.d-flex')) {
+                    let active = document.querySelector('.profile-container.d-flex')
+                    active.classList.remove('d-flex')
+                    active.classList.add('d-none')
+                }
+                tabs[+event.currentTarget.dataset.container].classList.add('d-flex')
+                tabs[+event.currentTarget.dataset.container].classList.remove('d-none')
+            }
+
+        })
+    })
+}
 
 if (document.querySelector('.js-open-modal')) {
     document.querySelectorAll('.js-open-modal').forEach(el=>{

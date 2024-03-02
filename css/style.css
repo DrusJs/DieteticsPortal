@@ -54,7 +54,7 @@ body.no-scroll {
     overflow: hidden;
 }
 
-h1.title {
+h1.title, .modal-title {
     font-family: var(--font-primary);
     font-weight: 600;
     font-size: 32px;
@@ -241,6 +241,9 @@ a.phone {
     color: var(--color-green);
     background-color: var(--color-green-light);
 }
+.swap-select.table-select .swap-select__item {
+    font-size: 16px;
+}
 
 .main {
     flex: 1 0 auto;
@@ -275,6 +278,9 @@ a.phone {
 .modal-block.specialist {
     max-width: 800px;
 
+}
+.modal-block.call-settings {
+    max-width: 600px;
 }
 .modal-block.authorize {
     max-width: 500px;
@@ -577,14 +583,15 @@ input:checked + .primary-input-radio {
 }
 .primary-select-head .primary-select-head__value {
     margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 }
 .primary-select-head .primary-select-head__value::after {
     content: '';
     width: 16px;
     height: 16px;
     display: inline-block;
-    position: relative;
-    top: 3px;
     background-image: url(../images/icons/arrow-icon.svg);
     transform: rotate(90deg);
     background-position: center center;
@@ -640,9 +647,11 @@ input:checked + .primary-input-radio {
 }
 .dot-checkbox  {
     cursor: pointer;
+    line-height: 120%;
 }
 .dot-checkbox .checkmark {
     width: 20px;
+    min-width: 20px;
     margin-right: 8px;
     display: inline-block;
     height: 10px;
@@ -892,8 +901,114 @@ input:checked + .primary-input-check::before {
     color: var(--colo-gray3);
 }
 
+.month-table.active-table {
+    display: block;
+}
+
+.month-table {
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+}
+.month-table th {
+    text-align: center;
+    color: var(--colo-gray3);
+}
+.month-table td {
+    border: 1px solid var(--colo-gray5);
+    width: calc(100% / 7);
+    text-align: center;
+    vertical-align: top;
+    padding: 5px;
+}
+.month-table td.disabled {
+    border: none;
+    color: var(--colo-gray4);
+}
+.month-table td.disabled .month-table_item .time {
+    color: var(--colo-gray4);
+}
+.month-table td.disabled .show-consults {
+    color: var(--colo-gray4);
+}
+.month-table td .show-consults {
+    background-color: transparent;
+    border: none;
+    color: var(--color-blue);
+    text-decoration: underline;
+    cursor: default;
+    pointer-events: none;
+}
+.month-table .month-table_item {
+    background-color: var(--colo-gray6);
+    padding: 3px 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+.month-table .month-table_item .name {
+    width: 50%;
+    text-align: left;
+    margin-right: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.month-table .month-table_item .time {
+    color: var(--color-green);
+}
+.camera-container {
+    background-color: var(--colo-gray3);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+}
+.camera-container .name {
+    white-space: nowrap;
+}
+.action-panel {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px 4px 10px;
+    border-radius: 30px;
+    background-color: var(--colo-gray5);
+}
+.microphone-status {
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../images/icons/mic.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.microphone-status.disabled {
+    background-image: url(../images/icons/mic_off.svg);
+}
+.open-settings, .micro-control, .camera-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-green);
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+}
+.end-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-red);
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+}
 @media (max-width: 787px) {
-    h1.title {
+    h1.title, .modal-title {
         font-size: 28px;
     }
     h2.title {
