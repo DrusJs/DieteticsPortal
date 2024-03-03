@@ -1076,6 +1076,23 @@ input:checked + .primary-input-check {
     flex-direction: column;
     gap: 20px;
 }
+.medcard-block {
+    background-color: var(--colo-gray6);
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: auto;
+}
+.consult-history-block {
+    background-color: var(--colo-gray6);
+    border-radius: 10px;
+    padding: 20px;
+}
+.parameter-block {
+    background-color: var(--color-white);
+    padding: 6px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
 
 
 @media (max-width: 1399.98px) { 
@@ -1084,7 +1101,10 @@ input:checked + .primary-input-check {
 @media (max-width: 1199.98px) { 
 
 }
-@media (max-width: 991.98px) { 
+@media (max-width: 991.98px) {
+    .medcard-block {
+        margin-left: 0;
+    }
     .specialist-actions {
         width: 100%;
         min-width: auto;
@@ -1153,7 +1173,7 @@ input:checked + .primary-input-check {
     }
     .burger-menu {
         position: absolute;
-        top: -200%;
+        top: -100%;
         left: 0;
         padding: 20px 40px;
         transition: var(--transition);
