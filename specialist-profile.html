@@ -13,12 +13,12 @@
     <body>
         <div class="wrapper">
             <header class="header">
-                <div class="container round mt-4 pb-0">
+                <div class="container round mt-4 pb-md-0">
                     <div class="d-flex align-items-center justify-content-between">
                         <a href="/" class="logo">
                             <img src="images/icons/logo.svg" alt="">
                         </a>
-                        <div class="location-select">
+                        <div class="location-select d-none d-md-block">
                             <div class="location-select-head">
                                 <p class="location c-green">Санкт-петербург</p>
                             </div>
@@ -60,16 +60,62 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="burger-button d-md-none d-flex align-items-center justify-content-center">
+                        <div class="burger-button burger-open d-md-none d-flex align-items-center justify-content-center">
                         </div>
                     </div>
-                    <nav>
-                        <ul class="navigation w-100 d-flex mb-0 mt-4 gap-3">
+                    <nav class="burger-menu">
+                        <div class="d-flex d-md-none w-100 justify-content-between">
+                            <div class="header-action-basket d-flex justify-content-center align-items-center">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2202_1190)">
+                                    <path d="M14.6667 6.00001H11.4734L8.54669 1.62001C8.28002 1.22668 7.70002 1.22668 7.44002 1.62001L4.51335 6.00001H1.33335C0.966687 6.00001 0.666687 6.30001 0.666687 6.66668C0.666687 6.72668 0.673354 6.78668 0.693354 6.84668L2.38669 13.0267C2.54002 13.5867 3.05335 14 3.66669 14H12.3334C12.9467 14 13.46 13.5867 13.62 13.0267L15.3134 6.84668L15.3334 6.66668C15.3334 6.30001 15.0334 6.00001 14.6667 6.00001ZM7.99335 3.19335L9.86669 6.00001H6.12002L7.99335 3.19335ZM8.00002 11.3333C7.26669 11.3333 6.66669 10.7333 6.66669 10C6.66669 9.26668 7.26669 8.66668 8.00002 8.66668C8.73335 8.66668 9.33335 9.26668 9.33335 10C9.33335 10.7333 8.73335 11.3333 8.00002 11.3333Z" fill="#27AE60"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_2202_1190">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="basket-count c-green">+1</span>
+                            </div>
+                            <div class="burger-button burger-close d-md-none d-flex align-items-center justify-content-center">
+                            </div>
+                        </div>
+                        <ul class="navigation w-100 d-flex flex-md-row flex-column mb-0 mt-4 gap-3">
                             <li class="navigation__item active">Выбор специалиста</li>
                             <li class="navigation__item">Магазин</li>
                             <li class="navigation__item">Другие услуги</li>
                             <li class="navigation__item">О сервисе</li>
                         </ul>
+                        <a href="auth.html" class="header-action-profile d-md-none d-flex justify-content-center align-items-center gap-2 p-2 mt-4">
+                            <p class="text-desc c-green m-0">Войти</p>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2202_1201)">
+                                    <path d="M7.19333 10.86C7.45333 11.12 7.87333 11.12 8.13333 10.86L10.5267 8.46667C10.7867 8.20667 10.7867 7.78667 10.5267 7.52667L8.13333 5.13333C7.87333 4.87333 7.45333 4.87333 7.19333 5.13333C6.93333 5.39333 6.93333 5.81333 7.19333 6.07333L8.44667 7.33333H2.66667C2.3 7.33333 2 7.63333 2 8C2 8.36667 2.3 8.66667 2.66667 8.66667H8.44667L7.19333 9.92C6.93333 10.18 6.94 10.6067 7.19333 10.86ZM12.6667 2H3.33333C2.59333 2 2 2.6 2 3.33333V5.33333C2 5.7 2.3 6 2.66667 6C3.03333 6 3.33333 5.7 3.33333 5.33333V4C3.33333 3.63333 3.63333 3.33333 4 3.33333H12C12.3667 3.33333 12.6667 3.63333 12.6667 4V12C12.6667 12.3667 12.3667 12.6667 12 12.6667H4C3.63333 12.6667 3.33333 12.3667 3.33333 12V10.6667C3.33333 10.3 3.03333 10 2.66667 10C2.3 10 2 10.3 2 10.6667V12.6667C2 13.4 2.6 14 3.33333 14H12.6667C13.4 14 14 13.4 14 12.6667V3.33333C14 2.6 13.4 2 12.6667 2Z" fill="#27AE60"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2202_1201">
+                                        <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <div class="d-flex d-md-none justify-content-between mt-3 align-items-center">
+                            <div class="location-select">
+                                <div class="location-select-head">
+                                    <p class="location c-green">Санкт-петербург</p>
+                                </div>
+                                <ul class="location-select-dropdown">
+                                    <li class="location-select-dropdown__item">Санкт-петербург</li>
+                                    <li class="location-select-dropdown__item">Москва</li>
+                                    <li class="location-select-dropdown__item">Екатеринбург</li>
+                                </ul>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center align-items-end">
+                                <p class="text-desc c-gray m-0">Техническая поддержка</p>
+                                <a class="phone text-m c-green" href="tel:+88001111111">8 800 111 11 11</a>
+                            </div>
+                        </div>
                     </nav>
                 </div>
             </header>

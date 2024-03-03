@@ -105,6 +105,14 @@ if (document.querySelector('.favorite-button')) {
         })
     })
 }
+if (document.querySelector('.burger-button')) {
+    document.querySelector('.burger-open').addEventListener('click', (event)=>{
+        document.querySelector('.burger-menu').classList.add('active')
+    })
+    document.querySelector('.burger-close').addEventListener('click', (event)=>{
+        document.querySelector('.burger-menu').classList.remove('active')        
+    })
+}
 
 function nextStep(el) {
     let block = el.closest('.container')

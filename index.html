@@ -13,12 +13,12 @@
     <body>
         <div class="wrapper">
             <header class="header">
-                <div class="container round mt-4 pb-0">
+                <div class="container round mt-4 pb-md-0">
                     <div class="d-flex align-items-center justify-content-between">
                         <a href="/" class="logo">
                             <img src="images/icons/logo.svg" alt="">
                         </a>
-                        <div class="location-select">
+                        <div class="location-select d-none d-md-block">
                             <div class="location-select-head">
                                 <p class="location c-green">Санкт-петербург</p>
                             </div>
@@ -60,16 +60,62 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="burger-button d-md-none d-flex align-items-center justify-content-center">
+                        <div class="burger-button burger-open d-md-none d-flex align-items-center justify-content-center">
                         </div>
                     </div>
-                    <nav>
-                        <ul class="navigation w-100 d-flex mb-0 mt-4 gap-3">
+                    <nav class="burger-menu">
+                        <div class="d-flex d-md-none w-100 justify-content-between">
+                            <div class="header-action-basket d-flex justify-content-center align-items-center">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2202_1190)">
+                                    <path d="M14.6667 6.00001H11.4734L8.54669 1.62001C8.28002 1.22668 7.70002 1.22668 7.44002 1.62001L4.51335 6.00001H1.33335C0.966687 6.00001 0.666687 6.30001 0.666687 6.66668C0.666687 6.72668 0.673354 6.78668 0.693354 6.84668L2.38669 13.0267C2.54002 13.5867 3.05335 14 3.66669 14H12.3334C12.9467 14 13.46 13.5867 13.62 13.0267L15.3134 6.84668L15.3334 6.66668C15.3334 6.30001 15.0334 6.00001 14.6667 6.00001ZM7.99335 3.19335L9.86669 6.00001H6.12002L7.99335 3.19335ZM8.00002 11.3333C7.26669 11.3333 6.66669 10.7333 6.66669 10C6.66669 9.26668 7.26669 8.66668 8.00002 8.66668C8.73335 8.66668 9.33335 9.26668 9.33335 10C9.33335 10.7333 8.73335 11.3333 8.00002 11.3333Z" fill="#27AE60"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_2202_1190">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="basket-count c-green">+1</span>
+                            </div>
+                            <div class="burger-button burger-close d-md-none d-flex align-items-center justify-content-center">
+                            </div>
+                        </div>
+                        <ul class="navigation w-100 d-flex flex-md-row flex-column mb-0 mt-4 gap-3">
                             <li class="navigation__item active">Выбор специалиста</li>
                             <li class="navigation__item">Магазин</li>
                             <li class="navigation__item">Другие услуги</li>
                             <li class="navigation__item">О сервисе</li>
                         </ul>
+                        <a href="auth.html" class="header-action-profile d-md-none d-flex justify-content-center align-items-center gap-2 p-2 mt-4">
+                            <p class="text-desc c-green m-0">Войти</p>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2202_1201)">
+                                    <path d="M7.19333 10.86C7.45333 11.12 7.87333 11.12 8.13333 10.86L10.5267 8.46667C10.7867 8.20667 10.7867 7.78667 10.5267 7.52667L8.13333 5.13333C7.87333 4.87333 7.45333 4.87333 7.19333 5.13333C6.93333 5.39333 6.93333 5.81333 7.19333 6.07333L8.44667 7.33333H2.66667C2.3 7.33333 2 7.63333 2 8C2 8.36667 2.3 8.66667 2.66667 8.66667H8.44667L7.19333 9.92C6.93333 10.18 6.94 10.6067 7.19333 10.86ZM12.6667 2H3.33333C2.59333 2 2 2.6 2 3.33333V5.33333C2 5.7 2.3 6 2.66667 6C3.03333 6 3.33333 5.7 3.33333 5.33333V4C3.33333 3.63333 3.63333 3.33333 4 3.33333H12C12.3667 3.33333 12.6667 3.63333 12.6667 4V12C12.6667 12.3667 12.3667 12.6667 12 12.6667H4C3.63333 12.6667 3.33333 12.3667 3.33333 12V10.6667C3.33333 10.3 3.03333 10 2.66667 10C2.3 10 2 10.3 2 10.6667V12.6667C2 13.4 2.6 14 3.33333 14H12.6667C13.4 14 14 13.4 14 12.6667V3.33333C14 2.6 13.4 2 12.6667 2Z" fill="#27AE60"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2202_1201">
+                                        <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <div class="d-flex d-md-none justify-content-between mt-3 align-items-center">
+                            <div class="location-select">
+                                <div class="location-select-head">
+                                    <p class="location c-green">Санкт-петербург</p>
+                                </div>
+                                <ul class="location-select-dropdown">
+                                    <li class="location-select-dropdown__item">Санкт-петербург</li>
+                                    <li class="location-select-dropdown__item">Москва</li>
+                                    <li class="location-select-dropdown__item">Екатеринбург</li>
+                                </ul>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center align-items-end">
+                                <p class="text-desc c-gray m-0">Техническая поддержка</p>
+                                <a class="phone text-m c-green" href="tel:+88001111111">8 800 111 11 11</a>
+                            </div>
+                        </div>
                     </nav>
                 </div>
             </header>
@@ -81,7 +127,7 @@
                     <div class="main-image"><img src="images/main-right.jpg" alt="Диетология"></div>
                 </div>
                 <div class="container round mb-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap flex-lg-nowrap gap-2">
                         <h1 class="title">Выберите специалиста</h1>
                         <div class="filter-search-block d-flex align-items-center gap-3">
                             <div class="search-item">
@@ -96,44 +142,46 @@
                         </div>
                     </div>
                     <div class="d-flex flex-column gap-3">
-                        <div class="specialist-card d-flex gap-3">
-                            <div class="specialist-photo">
-                                <img src="images/photo-spec1.jpg" alt="">
-                            </div>
-                            <div class="specialist-info w-100 d-flex flex-column">
-                                <div class="d-flex align-items-center gap-3">
-                                    <h2 class="title">Сергей Горякин</h2>
-                                    <span class="status">Оффлайн</span>
-                                    <button class="favorite-button">
-                                        <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_2202_1249)">
-                                            <path d="M20.9792 4.15624C18.2292 2.28124 14.8333 3.15624 13 5.30208C11.1667 3.15624 7.77083 2.27083 5.02083 4.15624C3.5625 5.15624 2.64583 6.84374 2.58333 8.62499C2.4375 12.6667 6.02083 15.9062 11.4896 20.875L11.5937 20.9687C12.3854 21.6875 13.6042 21.6875 14.3958 20.9583L14.5104 20.8542C19.9792 15.8958 23.5521 12.6562 23.4167 8.61458C23.3542 6.84375 22.4375 5.15624 20.9792 4.15624ZM13.1042 19.3229L13 19.4271L12.8958 19.3229C7.9375 14.8333 4.66667 11.8646 4.66667 8.85416C4.66667 6.77083 6.22917 5.20833 8.3125 5.20833C9.91667 5.20833 11.4792 6.23958 12.0312 7.66666H13.9792C14.5208 6.23958 16.0833 5.20833 17.6875 5.20833C19.7708 5.20833 21.3333 6.77083 21.3333 8.85416C21.3333 11.8646 18.0625 14.8333 13.1042 19.3229Z" fill="#E0E0E0"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_2202_1249">
-                                            <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </button>
+                        <div class="specialist-card d-flex gap-3 flex-lg-nowrap flex-wrap">
+                            <div class="d-flex gap-3 w-100">
+                                <div class="specialist-photo">
+                                    <img src="images/photo-spec1.jpg" alt="">
                                 </div>
-                                <p class="person text-desc c-gray mb-2">
-                                    Врач-эксперт
-                                </p>
-                                <p class="experience text-desc c-gray mb-2">
-                                    Стаж 10 лет
-                                </p>
-                                <p class="mail text-desc c-gray mb-2">
-                                    Портал диетологии
-                                </p>
-                                <div class="d-flex flex-grow-1"></div>
-                                <div class="rating-block d-flex align-items-center gap-2  js-open-modal" data-modal="specialist-modal">
-                                    <p class="text-desc">10 отзывов</p>
-                                    <img src="images/icons/rating-icon.svg" alt="">
-                                    <span>8 из 10</span>
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.69305 10.5867L9.27971 7.99999L6.69305 5.41332C6.43305 5.15332 6.43305 4.73332 6.69305 4.47332C6.95305 4.21332 7.37305 4.21332 7.63305 4.47332L10.693 7.53332C10.953 7.79332 10.953 8.21332 10.693 8.47332L7.63305 11.5333C7.37305 11.7933 6.95305 11.7933 6.69305 11.5333C6.43971 11.2733 6.43305 10.8467 6.69305 10.5867Z" fill="#333333"/>
-                                    </svg>                                        
+                                <div class="specialist-info w-100 d-flex flex-column">
+                                    <div class="d-flex align-items-center gap-3 mb-2">
+                                        <h2 class="title">Сергей Горякин</h2>
+                                        <span class="status">Оффлайн</span>
+                                        <button class="favorite-button d-md-block d-none">
+                                            <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_2296_5305)">
+                                                <path d="M20.9792 4.15624C18.2292 2.28124 14.8333 3.15624 13 5.30208C11.1667 3.15624 7.77083 2.27083 5.02083 4.15624C3.5625 5.15624 2.64583 6.84375 2.58333 8.625C2.4375 12.6667 6.02083 15.9062 11.4896 20.875L11.5937 20.9687C12.3854 21.6875 13.6042 21.6875 14.3958 20.9583L14.5104 20.8542C19.9792 15.8958 23.5521 12.6562 23.4167 8.61458C23.3542 6.84375 22.4375 5.15624 20.9792 4.15624Z" fill="#EB5757"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_2296_5305">
+                                                <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <p class="person text-desc c-gray mb-2">
+                                        Врач-эксперт
+                                    </p>
+                                    <p class="experience text-desc c-gray mb-2">
+                                        Стаж 10 лет
+                                    </p>
+                                    <p class="mail text-desc c-gray mb-2">
+                                        Портал диетологии
+                                    </p>
+                                    <div class="d-flex flex-grow-1"></div>
+                                    <div class="rating-block d-flex align-items-center gap-2  js-open-modal" data-modal="specialist-modal">
+                                        <p class="text-desc">10 отзывов</p>
+                                        <img src="images/icons/rating-icon.svg" alt="">
+                                        <span>8 из 10</span>
+                                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.69305 10.5867L9.27971 7.99999L6.69305 5.41332C6.43305 5.15332 6.43305 4.73332 6.69305 4.47332C6.95305 4.21332 7.37305 4.21332 7.63305 4.47332L10.693 7.53332C10.953 7.79332 10.953 8.21332 10.693 8.47332L7.63305 11.5333C7.37305 11.7933 6.95305 11.7933 6.69305 11.5333C6.43971 11.2733 6.43305 10.8467 6.69305 10.5867Z" fill="#333333"/>
+                                        </svg>                                        
+                                    </div>
                                 </div>
                             </div>
                             <div class="specialist-actions">
@@ -143,10 +191,10 @@
                                         <p class="price text-l">1500 руб.</p>
                                     </div>
                                     <div class="d-flex flex-grow-1"></div>
-                                    <button class="primary-button bordered">Все даты</button>
-                                    <button class="primary-button fill">Выбрать</button>
+                                    <button class="primary-button bordered d-lg-block d-none">Все даты</button>
+                                    <button class="primary-button fill d-lg-block d-none">Выбрать</button>
                                 </div>
-                                <div class="swap-select js-swap-active d-flex gap-1 mb-1">
+                                <div class="swap-select js-swap-active d-flex gap-1 mb-2">
                                     <span class="swap-select__item active">Сегодня</span>
                                     <span class="swap-select__item">21 дек</span>
                                     <span class="swap-select__item">25 дек</span>
@@ -155,47 +203,51 @@
                                     <span class="swap-select__item active">11:00</span>
                                     <span class="swap-select__item">18:30</span>
                                     <span class="swap-select__item">11:00</span>
-                                </div>
+                                </div>                                
+                                <button class="primary-button bordered d-lg-none d-block w-100 mt-3">Все даты</button>
+                                <button class="primary-button fill d-lg-none d-block w-100 mt-3">Выбрать</button>
                             </div>
                         </div>
-                        <div class="specialist-card d-flex gap-3">
-                            <div class="specialist-photo">
-                                <img src="images/photo-spec2.jpg" alt="">
-                            </div>
-                            <div class="specialist-info w-100 d-flex flex-column">
-                                <div class="d-flex align-items-center gap-3">
-                                    <h2 class="title">Елена Петрова</h2>
-                                    <span class="status active">Онлайн</span>
-                                    <button class="favorite-button">
-                                        <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_2202_1249)">
-                                            <path d="M20.9792 4.15624C18.2292 2.28124 14.8333 3.15624 13 5.30208C11.1667 3.15624 7.77083 2.27083 5.02083 4.15624C3.5625 5.15624 2.64583 6.84374 2.58333 8.62499C2.4375 12.6667 6.02083 15.9062 11.4896 20.875L11.5937 20.9687C12.3854 21.6875 13.6042 21.6875 14.3958 20.9583L14.5104 20.8542C19.9792 15.8958 23.5521 12.6562 23.4167 8.61458C23.3542 6.84375 22.4375 5.15624 20.9792 4.15624ZM13.1042 19.3229L13 19.4271L12.8958 19.3229C7.9375 14.8333 4.66667 11.8646 4.66667 8.85416C4.66667 6.77083 6.22917 5.20833 8.3125 5.20833C9.91667 5.20833 11.4792 6.23958 12.0312 7.66666H13.9792C14.5208 6.23958 16.0833 5.20833 17.6875 5.20833C19.7708 5.20833 21.3333 6.77083 21.3333 8.85416C21.3333 11.8646 18.0625 14.8333 13.1042 19.3229Z" fill="#E0E0E0"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_2202_1249">
-                                            <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </button>
+                        <div class="specialist-card d-flex gap-3 flex-lg-nowrap flex-wrap">
+                            <div class="d-flex gap-3 w-100">
+                                <div class="specialist-photo">
+                                    <img src="images/photo-spec2.jpg" alt="">
                                 </div>
-                                <p class="person text-desc c-gray mb-2">
-                                    Врач-консультант
-                                </p>
-                                <p class="experience text-desc c-gray mb-2">
-                                    Стаж 3 лет
-                                </p>
-                                <p class="mail text-desc c-gray mb-2">
-                                    Портал диетологии
-                                </p>
-                                <div class="d-flex flex-grow-1"></div>
-                                <div class="rating-block d-flex align-items-center gap-2  js-open-modal" data-modal="specialist-modal">
-                                    <p class="text-desc">10 отзывов</p>
-                                    <img src="images/icons/rating-icon.svg" alt="">
-                                    <span>9 из 10</span>
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.69305 10.5867L9.27971 7.99999L6.69305 5.41332C6.43305 5.15332 6.43305 4.73332 6.69305 4.47332C6.95305 4.21332 7.37305 4.21332 7.63305 4.47332L10.693 7.53332C10.953 7.79332 10.953 8.21332 10.693 8.47332L7.63305 11.5333C7.37305 11.7933 6.95305 11.7933 6.69305 11.5333C6.43971 11.2733 6.43305 10.8467 6.69305 10.5867Z" fill="#333333"/>
-                                    </svg>                                        
+                                <div class="specialist-info w-100 d-flex flex-column">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <h2 class="title">Елена Петрова</h2>
+                                        <span class="status active">Онлайн</span>
+                                        <button class="favorite-button d-md-block d-none">
+                                            <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_2296_5305)">
+                                                <path d="M20.9792 4.15624C18.2292 2.28124 14.8333 3.15624 13 5.30208C11.1667 3.15624 7.77083 2.27083 5.02083 4.15624C3.5625 5.15624 2.64583 6.84375 2.58333 8.625C2.4375 12.6667 6.02083 15.9062 11.4896 20.875L11.5937 20.9687C12.3854 21.6875 13.6042 21.6875 14.3958 20.9583L14.5104 20.8542C19.9792 15.8958 23.5521 12.6562 23.4167 8.61458C23.3542 6.84375 22.4375 5.15624 20.9792 4.15624Z" fill="#EB5757"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_2296_5305">
+                                                <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <p class="person text-desc c-gray mb-2">
+                                        Врач-консультант
+                                    </p>
+                                    <p class="experience text-desc c-gray mb-2">
+                                        Стаж 3 лет
+                                    </p>
+                                    <p class="mail text-desc c-gray mb-2">
+                                        Портал диетологии
+                                    </p>
+                                    <div class="d-flex flex-grow-1"></div>
+                                    <div class="rating-block d-flex align-items-center gap-2  js-open-modal" data-modal="specialist-modal">
+                                        <p class="text-desc">10 отзывов</p>
+                                        <img src="images/icons/rating-icon.svg" alt="">
+                                        <span>9 из 10</span>
+                                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.69305 10.5867L9.27971 7.99999L6.69305 5.41332C6.43305 5.15332 6.43305 4.73332 6.69305 4.47332C6.95305 4.21332 7.37305 4.21332 7.63305 4.47332L10.693 7.53332C10.953 7.79332 10.953 8.21332 10.693 8.47332L7.63305 11.5333C7.37305 11.7933 6.95305 11.7933 6.69305 11.5333C6.43971 11.2733 6.43305 10.8467 6.69305 10.5867Z" fill="#333333"/>
+                                        </svg>                                        
+                                    </div>
                                 </div>
                             </div>
                             <div class="specialist-actions">
@@ -220,44 +272,46 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="specialist-card d-flex gap-3">
-                            <div class="specialist-photo">
-                                <img src="images/photo-spec3.jpg" alt="">
-                            </div>
-                            <div class="specialist-info w-100 d-flex flex-column">
-                                <div class="d-flex align-items-center gap-3">
-                                    <h2 class="title">Тамара Мустафаева</h2>
-                                    <span class="status active">Онлайн</span>
-                                    <button class="favorite-button">
-                                        <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_2202_1249)">
-                                            <path d="M20.9792 4.15624C18.2292 2.28124 14.8333 3.15624 13 5.30208C11.1667 3.15624 7.77083 2.27083 5.02083 4.15624C3.5625 5.15624 2.64583 6.84374 2.58333 8.62499C2.4375 12.6667 6.02083 15.9062 11.4896 20.875L11.5937 20.9687C12.3854 21.6875 13.6042 21.6875 14.3958 20.9583L14.5104 20.8542C19.9792 15.8958 23.5521 12.6562 23.4167 8.61458C23.3542 6.84375 22.4375 5.15624 20.9792 4.15624ZM13.1042 19.3229L13 19.4271L12.8958 19.3229C7.9375 14.8333 4.66667 11.8646 4.66667 8.85416C4.66667 6.77083 6.22917 5.20833 8.3125 5.20833C9.91667 5.20833 11.4792 6.23958 12.0312 7.66666H13.9792C14.5208 6.23958 16.0833 5.20833 17.6875 5.20833C19.7708 5.20833 21.3333 6.77083 21.3333 8.85416C21.3333 11.8646 18.0625 14.8333 13.1042 19.3229Z" fill="#E0E0E0"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_2202_1249">
-                                            <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </button>
+                        <div class="specialist-card d-flex gap-3 flex-lg-nowrap flex-wrap">
+                            <div class="d-flex gap-3 w-100">
+                                <div class="specialist-photo">
+                                    <img src="images/photo-spec3.jpg" alt="">
                                 </div>
-                                <p class="person text-desc c-gray mb-2">
-                                    Консультант по питанию
-                                </p>
-                                <p class="experience text-desc c-gray mb-2">
-                                    Стаж 5 лет
-                                </p>
-                                <p class="mail text-desc c-gray mb-2">
-                                    Портал диетологии
-                                </p>
-                                <div class="d-flex flex-grow-1"></div>
-                                <div class="rating-block d-flex align-items-center gap-2  js-open-modal" data-modal="specialist-modal">
-                                    <p class="text-desc">10 отзывов</p>
-                                    <img src="images/icons/rating-icon.svg" alt="">
-                                    <span>9 из 10</span>
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.69305 10.5867L9.27971 7.99999L6.69305 5.41332C6.43305 5.15332 6.43305 4.73332 6.69305 4.47332C6.95305 4.21332 7.37305 4.21332 7.63305 4.47332L10.693 7.53332C10.953 7.79332 10.953 8.21332 10.693 8.47332L7.63305 11.5333C7.37305 11.7933 6.95305 11.7933 6.69305 11.5333C6.43971 11.2733 6.43305 10.8467 6.69305 10.5867Z" fill="#333333"/>
-                                    </svg>                                        
+                                <div class="specialist-info w-100 d-flex flex-column">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <h2 class="title">Тамара Мустафаева</h2>
+                                        <span class="status active">Онлайн</span>
+                                        <button class="favorite-button d-md-block d-none">
+                                            <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_2296_5305)">
+                                                <path d="M20.9792 4.15624C18.2292 2.28124 14.8333 3.15624 13 5.30208C11.1667 3.15624 7.77083 2.27083 5.02083 4.15624C3.5625 5.15624 2.64583 6.84375 2.58333 8.625C2.4375 12.6667 6.02083 15.9062 11.4896 20.875L11.5937 20.9687C12.3854 21.6875 13.6042 21.6875 14.3958 20.9583L14.5104 20.8542C19.9792 15.8958 23.5521 12.6562 23.4167 8.61458C23.3542 6.84375 22.4375 5.15624 20.9792 4.15624Z" fill="#EB5757"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_2296_5305">
+                                                <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <p class="person text-desc c-gray mb-2">
+                                        Консультант по питанию
+                                    </p>
+                                    <p class="experience text-desc c-gray mb-2">
+                                        Стаж 5 лет
+                                    </p>
+                                    <p class="mail text-desc c-gray mb-2">
+                                        Портал диетологии
+                                    </p>
+                                    <div class="d-flex flex-grow-1"></div>
+                                    <div class="rating-block d-flex align-items-center gap-2  js-open-modal" data-modal="specialist-modal">
+                                        <p class="text-desc">10 отзывов</p>
+                                        <img src="images/icons/rating-icon.svg" alt="">
+                                        <span>9 из 10</span>
+                                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.69305 10.5867L9.27971 7.99999L6.69305 5.41332C6.43305 5.15332 6.43305 4.73332 6.69305 4.47332C6.95305 4.21332 7.37305 4.21332 7.63305 4.47332L10.693 7.53332C10.953 7.79332 10.953 8.21332 10.693 8.47332L7.63305 11.5333C7.37305 11.7933 6.95305 11.7933 6.69305 11.5333C6.43971 11.2733 6.43305 10.8467 6.69305 10.5867Z" fill="#333333"/>
+                                        </svg>                                        
+                                    </div>
                                 </div>
                             </div>
                             <div class="specialist-actions">
@@ -339,12 +393,12 @@
                             </p>
                         </div>
                     </div>
-                    <h2 class="title c-green">Образование</h2>
-                    <p class="text-s c-gray">Образование</p>
-                    <h2 class="title c-green">О работе</h2>
-                    <p class="text-s c-gray">Описание работы</p>
-                    <h2 class="title c-green">Документы</h2>
-                    <div class="d-flex gap-3 mt-3">
+                    <h2 class="title c-green mb-2">Образование</h2>
+                    <p class="text-s c-gray mb-2">Образование</p>
+                    <h2 class="title c-green mb-2">О работе</h2>
+                    <p class="text-s c-gray mb-2">Описание работы</p>
+                    <h2 class="title c-green mb-2">Документы</h2>
+                    <div class="d-flex flex-wrap gap-3 mt-3">
                         <div class="doc-item d-flex align-items-center gap-2">
                             <img src="images/icons/document-icon.svg" alt="">
                             <span class="name">Диплом_1</span>
@@ -356,7 +410,7 @@
                             <span class="size">(2.5 МБ)</span>
                         </div>
                     </div>
-                    <div class="d-flex gap-5 mt-4">
+                    <div class="d-flex align-items-center gap-md-5 gap-3 mt-4">
                         <h2 class="title c-green">Отзывы</h2>
                         <div class="rating-block d-flex align-items-center gap-2">
                             <p class="text-desc">10 отзывов</p>
