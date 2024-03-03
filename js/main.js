@@ -55,7 +55,7 @@ if (document.querySelector('.js-swap-table')) {
         })
     })
 }
-if (document.querySelector('.profile-menu-list')) {
+if (document.querySelector('.profile-menu-list.js-containers')) {
     let elements = Array.from(document.querySelector('.profile-menu-list').children)
     let tabs = document.querySelectorAll('.profile-container')
     elements.forEach(el=>{

@@ -16,12 +16,12 @@
 }
 :root {
     --color-white: #FFFFFF;
-    --colo-gray1: #333333;
-    --colo-gray2: #989898;
-    --colo-gray3: #BDBDBD;
-    --colo-gray4: #E0E0E0;
-    --colo-gray5: #F1F1F1;
-    --colo-gray6: #FAFAFA;
+    --color-gray1: #333333;
+    --color-gray2: #989898;
+    --color-gray3: #BDBDBD;
+    --color-gray4: #E0E0E0;
+    --color-gray5: #F1F1F1;
+    --color-gray6: #FAFAFA;
     --color-blue: #2F80ED;
     --color-green: #27AE60;
     --color-green-hover: #1F8B4D;
@@ -88,7 +88,7 @@ p.text-s {
     font-size: 14px;
 }
 .c-gray {
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
 }
 .c-green {
     color: var(--color-green);
@@ -192,12 +192,12 @@ a.phone {
     padding: 0;
 }
 .header .navigation {
-    border-top: 1px solid var(--colo-gray4);
+    border-top: 1px solid var(--color-gray4);
     padding: 24px 0 0;
 
 }
 .navigation__item {
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
     padding-bottom: 16px;
     cursor: pointer;
     transition: var(--transition);
@@ -235,13 +235,13 @@ a.phone {
 .swap-select {
     padding: 2px;
     border-radius: 50px;
-    border: 1px solid var(--colo-gray4);
+    border: 1px solid var(--color-gray4);
     width: fit-content;
     background-color: var(--color-white);
 }
 .swap-select__item {
     border-radius: 50px;
-    color: var(--colo-gray1);
+    color: var(--color-gray1);
     transition: var(--transition);
     font-size: 24px;
     padding: 0 8px;
@@ -318,29 +318,29 @@ a.phone {
     background-size: 16px 16px;
     background-position: center right 15px;
     background-repeat: no-repeat;
-    background-color: var(--colo-gray6);
+    background-color: var(--color-gray6);
     border: none;
     outline: none;
 }
 .search-item .search::placeholder {
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
 }
 .primary-input {
     padding: 11px 15px 10px 15px;
     width: 100%;
     border-radius: 10px;
-    background-color: var(--colo-gray6);
-    color: var(--colo-gray3);
+    background-color: var(--color-gray6);
+    color: var(--color-gray3);
     border: none;
     outline: none;
     resize: none;
 }
 .primary-input-label {
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
     font-size: 14px;
 }
 .primary-input::placeholder {
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
 }
 .filter-select-head {
     cursor: pointer;
@@ -356,7 +356,7 @@ a.phone {
     background-position: center center;
 }
 .specialist-card {
-    border-bottom: 1px solid var(--colo-gray4);
+    border-bottom: 1px solid var(--color-gray4);
     padding-bottom: 20px;
 }
 .specialist-card:last-child {
@@ -365,7 +365,7 @@ a.phone {
 }
 
 .specialist-info .status {
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
 }
 .specialist-info .status.active {
     color: var(--color-green);
@@ -432,15 +432,15 @@ a.phone {
 }
 .specialist-actions {
     border-radius: 15px;
-    background-color: var(--colo-gray6);
+    background-color: var(--color-gray6);
     padding: 20px;
     min-width: 400px;
 }
 .specialist-actions .price {
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
 }
 .specialist-actions-inner {
-    border-bottom: 1px solid var(--colo-gray3);
+    border-bottom: 1px solid var(--color-gray3);
 }
 .primary-button {
     color: var(--color-green);
@@ -544,7 +544,7 @@ input[type=checkbox] {
     display: flex;
     align-items: center;
     gap: 6px;
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
     cursor: pointer;
 }
 .primary-input-radio::before {
@@ -553,7 +553,7 @@ input[type=checkbox] {
     height: 16px;
     display: block;
     border-radius: 100%;
-    box-shadow: 0 0 0 2px var(--colo-gray3);
+    box-shadow: 0 0 0 2px var(--color-gray3);
     border: 3px solid var(--color-white);
     background-color: var(--color-white);
 }
@@ -566,7 +566,7 @@ input:checked + .primary-input-radio {
 }
 .primary-input-check {
     cursor: pointer;
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
 }
 .primary-input-check::before {
     content: '';
@@ -577,7 +577,7 @@ input:checked + .primary-input-radio {
     top: 3px;
     margin-right: 10px;
     border-radius: 4px;
-    border: 1px solid var(--colo-gray3);
+    border: 1px solid var(--color-gray3);
     background-color: var(--color-white);
     background-image: url(../images/icons/done-checkbox.svg);
     background-position: center center;
@@ -663,7 +663,7 @@ input:checked + .primary-input-radio {
     width: 100%;
     height: 8px;
     border-radius: 8px;
-    background-color: var(--colo-gray4);
+    background-color: var(--color-gray4);
 }
 .volume-test__item.active {
     background-color: var(--color-green);
@@ -680,7 +680,7 @@ input:checked + .primary-input-radio {
     height: 10px;
     border-radius: 10px;
     position: relative;
-    background-color: var(--colo-gray2);
+    background-color: var(--color-gray2);
     transition: var(--transition);
 }
 .dot-checkbox .checkmark::after {
@@ -757,7 +757,7 @@ input:checked + .primary-input-check {
 }
 .favorite-button path {
     fill: transparent;
-    stroke: var(--colo-gray4);
+    stroke: var(--color-gray4);
     transition: var(--transition);
 }
 .favorite-button.active path {
@@ -767,7 +767,7 @@ input:checked + .primary-input-check {
 .rating-block {
     border-radius: 5px;
     padding: 10px;
-    background-color: var(--colo-gray6);
+    background-color: var(--color-gray6);
     width: fit-content;
 }
 .auth-block {
@@ -795,7 +795,7 @@ input:checked + .primary-input-check {
     padding: 15px 10px;
     border-radius: 10px;
     width: 100%;
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
     white-space: nowrap;
     cursor: pointer;
     transition: var(--transition);
@@ -831,7 +831,7 @@ input:checked + .primary-input-check {
     padding: 3px 7px 3px 7px;
 }
 .profile-calendar .calendar th {
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
 }
 .profile-calendar .calendar td {
     position: relative;
@@ -844,6 +844,8 @@ input:checked + .primary-input-check {
 .profile-calendar .calendar td.pointed::before {
     content: '';
     width: 2px;
+    min-width: 2px;
+    min-height: 2px;
     height: 2px;
     display: block;
     position: absolute;
@@ -879,10 +881,12 @@ input:checked + .primary-input-check {
     width: fit-content;
     margin-left: auto;
     text-align: right;
+    white-space: nowrap;
 }
 .profile-balance {
     border: none;
     background-color: transparent;
+    font-size: 0px;
 }
 .photo-file-item {
     padding: 5px 10px;
@@ -904,7 +908,7 @@ input:checked + .primary-input-check {
     margin-left: 10px;
 }
 .work-section {
-    background-color: var(--colo-gray6);
+    background-color: var(--color-gray6);
     padding: 15px;
     border-radius: 10px;
 }
@@ -919,17 +923,17 @@ input:checked + .primary-input-check {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
 }
 .calendar-item {
-    border-left: 2px solid var(--colo-gray4);
+    border-left: 2px solid var(--color-gray4);
     padding-left: 10px;
 }
 .calendar-item__name {
     
 }
 .calendar-item__type {
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
 }
 .calendar-item__time {
     color: var(--color-green)
@@ -941,7 +945,7 @@ input:checked + .primary-input-check {
 }
 .profile-calendar .date {
     text-align: center;
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
 }
 
 .month-table.active-table {
@@ -955,10 +959,10 @@ input:checked + .primary-input-check {
 }
 .month-table th {
     text-align: center;
-    color: var(--colo-gray3);
+    color: var(--color-gray3);
 }
 .month-table td {
-    border: 1px solid var(--colo-gray5);
+    border: 1px solid var(--color-gray5);
     width: calc(100% / 7);
     text-align: center;
     vertical-align: top;
@@ -966,13 +970,13 @@ input:checked + .primary-input-check {
 }
 .month-table td.disabled {
     border: none;
-    color: var(--colo-gray4);
+    color: var(--color-gray4);
 }
 .month-table td.disabled .month-table_item .time {
-    color: var(--colo-gray4);
+    color: var(--color-gray4);
 }
 .month-table td.disabled .show-consults {
-    color: var(--colo-gray4);
+    color: var(--color-gray4);
 }
 .month-table td .show-consults {
     background-color: transparent;
@@ -983,7 +987,7 @@ input:checked + .primary-input-check {
     pointer-events: none;
 }
 .month-table .month-table_item {
-    background-color: var(--colo-gray6);
+    background-color: var(--color-gray6);
     padding: 3px 5px;
     margin-bottom: 5px;
     border-radius: 5px;
@@ -1001,7 +1005,7 @@ input:checked + .primary-input-check {
     color: var(--color-green);
 }
 .camera-container {
-    background-color: var(--colo-gray3);
+    background-color: var(--color-gray3);
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -1017,7 +1021,7 @@ input:checked + .primary-input-check {
     transform: translateX(-50%);
     padding: 5px 10px 4px 10px;
     border-radius: 30px;
-    background-color: var(--colo-gray5);
+    background-color: var(--color-gray5);
 }
 .microphone-status {
     display: block;
@@ -1052,7 +1056,7 @@ input:checked + .primary-input-check {
 }
 .chat-header {
     padding-bottom: 20px;
-    border-bottom: 1px solid var(--colo-gray3);
+    border-bottom: 1px solid var(--color-gray3);
 }
 .chat-header .name {
     line-height: 1;
@@ -1071,19 +1075,69 @@ input:checked + .primary-input-check {
     width: 80%;
     border-radius: 20px;
     padding: 20px;
-    background-color: var(--color-green-light);
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
+}
+.message .photo {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+.message .photo img {
+    width: 100%;
+    object-fit: cover;
+}
+.message.message-system {
+    background-color: var(--color-green-light);
+}
+.message.own {    
+    background-color: var(--color-green-light);
+    margin-left: auto;
+    margin-right: 38px;
+    color: var(--color-green);
+}
+.message.opponent {    
+    background-color: var(--color-gray5);
+    margin-left: 38px;
+}
+.message.own::before {
+    content: '';
+    width: 22px;
+    height: 23px;
+    position: absolute;
+    background-image: url(../images/icons/chat-subicon-green.svg);
+    bottom: -6px;
+    right: -7px;
+}
+.message.opponent::before {
+    content: '';
+    width: 22px;
+    height: 23px;
+    position: absolute;
+    background-image: url(../images/icons/chat-subicon-gray.svg);
+    bottom: -6px;
+    left: -7px;
+}
+.message.opponent .photo {
+    bottom: -12px;
+    left: -42px;
+}
+.message.own .photo {
+    bottom: -12px;
+    right: -42px;
 }
 .medcard-block {
-    background-color: var(--colo-gray6);
+    background-color: var(--color-gray6);
     border-radius: 10px;
     padding: 20px;
     margin-left: auto;
 }
 .consult-history-block {
-    background-color: var(--colo-gray6);
+    background-color: var(--color-gray6);
     border-radius: 10px;
     padding: 20px;
 }
@@ -1099,7 +1153,14 @@ input:checked + .primary-input-check {
 
 }
 @media (max-width: 1199.98px) { 
-
+    .balance-container {
+        margin-left: 0;
+        width: 100%;
+    }
+    .profile-balance {
+        font-size: 14px;
+        color: var(--color-green);
+    }
 }
 @media (max-width: 991.98px) {
     .medcard-block {
@@ -1127,6 +1188,7 @@ input:checked + .primary-input-check {
         fill: var(--color-green);
         stroke: var(--color-green);
     } 
+
 }
 @media (max-width: 767.98px) { 
     h1.title, .modal-title {
