@@ -273,6 +273,7 @@ a.phone {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    z-index: 15;
     /* transition: var(--transition); */
 }
 .modal-wrapper.active {
@@ -334,6 +335,9 @@ a.phone {
     border: none;
     outline: none;
     resize: none;
+}
+.primary-input.medlist {
+    min-height: 300px;
 }
 .primary-input-label {
     color: var(--color-gray3);
@@ -425,6 +429,7 @@ a.phone {
     background-color: rgba(233, 86, 86, .1);
     border-radius: 10px;
     padding: 5px 15px 5px 10px;
+    white-space: nowrap;
 }
 .doc-item .remove {
     background-color: transparent;
@@ -863,7 +868,7 @@ input:checked + .primary-input-check {
 .profile-photo {
     overflow: hidden;
     border-radius: 10px;
-    width: 130px;
+    min-width: 130px;
     height: 130px;
 }
 .profile-photo img {
@@ -1235,6 +1240,7 @@ input:checked + .primary-input-check {
     }
     .burger-menu {
         position: absolute;
+        z-index: 10;
         top: -100%;
         left: 0;
         padding: 20px 40px;
@@ -1266,6 +1272,34 @@ input:checked + .primary-input-check {
         font-size: 12px;
         padding-bottom: 10px;
     }
+    .profile-photo {
+        width: 70px;
+        min-width: 70px;
+        height: 70px;
+        position: absolute;
+    }
+    .profile-photo img {
+        width: 70px;
+    }
+    .absolute-space {
+        margin-left: 86px;
+    }
+    .profile-main h1.title {
+        padding-left: 86px;
+        min-height: 80px;
+    }
+    .profile-main h1.title.nospace {
+        min-height: auto;
+    }
+    .primary-select.online-select {
+        margin-left: 0;
+        margin-left: 86px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .primary-select.online-select .primary-select-head {
+        padding: 4px 8px;
+    }
 }
 @media (max-width: 575.98px) { 
     .specialist-photo {
@@ -1277,5 +1311,10 @@ input:checked + .primary-input-check {
     }
     .header, .main, .footer {
         padding: 0 10px;
+    }
+    .profile-main,
+    .profile-info,
+    .chat-container {
+        padding: 15px;
     }
 }

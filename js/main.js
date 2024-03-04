@@ -1,12 +1,15 @@
 if (document.querySelector('.location-select-head')) {
-    document.querySelector('.location-select-head').addEventListener('click', (event)=>{
-        event.currentTarget.parentElement.classList.toggle('active')
+    document.querySelectorAll('.location-select-head').forEach(el=>{
+        el.addEventListener('click', (event)=>{
+            event.currentTarget.parentElement.classList.toggle('active')
+        })
     })
     document.querySelectorAll('.location-select-dropdown__item').forEach((item)=>{
         item.addEventListener('click', (event)=>{
-            let select = event.currentTarget.closest('.location-select')
-            select.classList.remove('active')
-            select.querySelector('.location').innerHTML = event.currentTarget.innerHTML
+            document.querySelectorAll('.location-select').forEach(select=>{
+                select.classList.remove('active')
+                select.querySelector('.location').innerHTML = event.currentTarget.innerHTML
+            })
         })
     })
 }
