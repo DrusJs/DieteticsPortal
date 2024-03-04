@@ -1370,9 +1370,14 @@ input:checked + .primary-input-check {
 
 
 @media (max-width: 1399.98px) { 
-
+    .month-table-wrapper {
+        max-width: 784px;
+    }
 }
 @media (max-width: 1199.98px) { 
+    .month-table-wrapper {
+        max-width: 604px;
+    }
     .balance-container {
         margin-left: 0;
         width: 100%;
@@ -1383,6 +1388,9 @@ input:checked + .primary-input-check {
     }
 }
 @media (max-width: 991.98px) {
+    .month-table-wrapper {
+        max-width: 680px;
+    }
     .medcard-block {
         margin-left: 0;
     }
