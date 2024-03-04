@@ -19,6 +19,7 @@ if (document.querySelector('.primary-select-head')) {
         el.addEventListener('click', (event)=>{
             event.currentTarget.parentElement.classList.toggle('active')
         })
+        if (el.classList.contains('js-return')) {return}
         select.querySelectorAll('.primary-select-dropdown__item').forEach((item)=>{
             item.addEventListener('click', (event)=>{            
                 select.classList.remove('active')
@@ -109,14 +110,42 @@ if (document.querySelector('.favorite-button')) {
     })
 }
 if (document.querySelector('.burger-button')) {
-    document.querySelector('.burger-open').addEventListener('click', (event)=>{
+    document.querySelector('.burger-open').addEventListener('click', ()=>{
         document.querySelector('.burger-menu').classList.add('active')
+        document.body.classList.add('no-scroll')
     })
-    document.querySelector('.burger-close').addEventListener('click', (event)=>{
-        document.querySelector('.burger-menu').classList.remove('active')        
+    document.querySelector('.burger-close').addEventListener('click', ()=>{
+        document.querySelector('.burger-menu').classList.remove('active') 
+        document.body.classList.add('remove')       
     })
 }
+if (document.querySelector('.burger-select')) {
+    document.querySelector('.burger-select').addEventListener('click', (event)=>{
+        event.currentTarget.classList.toggle('active')
+        if (event.currentTarget.classList.contains('active')) {
+            event.currentTarget.lastElementChild.classList.add('d-flex')
+            event.currentTarget.lastElementChild.classList.remove('d-none')
+        } else {            
+            event.currentTarget.lastElementChild.classList.add('d-none')
+            event.currentTarget.lastElementChild.classList.remove('d-flex')
+        }
+    })
+    document.querySelectorAll('.drop-item').forEach(el=>{        
+        let tabs = document.querySelectorAll('.profile-tabs .profile-container')
 
+        el.addEventListener('click', (event)=>{
+            document.querySelector('.burger-menu').classList.remove('active')
+            document.body.classList.remove('no-scroll')
+            if (document.querySelector('.profile-container.d-flex')) {
+                let active = document.querySelector('.profile-container.d-flex')
+                active.classList.remove('d-flex')
+                active.classList.add('d-none')
+            }
+            tabs[+event.currentTarget.dataset.container].classList.add('d-flex')
+            tabs[+event.currentTarget.dataset.container].classList.remove('d-none')
+        })
+    })
+}
 function nextStep(el) {
     let block = el.closest('.container')
     block.classList.remove('d-flex')

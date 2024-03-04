@@ -597,6 +597,46 @@ input:checked + .primary-input-radio {
     margin-left: auto;
     width: fit-content;
 }
+.primary-select.profile-select .photo {
+    overflow: hidden;
+    border-radius: 100%;
+    background-color: var(--color-green-light);
+    width: 24px;
+    height: 24px;
+}
+.primary-select.profile-select a {
+    color: var(--color-gray3);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 0;
+    transition: var(--transition);
+}
+.primary-select.profile-select a path {
+    transition: var(--transition);
+}
+.primary-select.profile-select a:hover {
+    color: var(--color-green);
+}
+.primary-select.profile-select a:hover path {
+    fill: var(--color-green);
+}
+.primary-select.profile-select .photo img {
+    width: 24px;
+    object-fit: cover;
+}
+.primary-select.profile-select.active .primary-select-head {
+    border-radius: 20px 20px 0 0;
+}
+.primary-select.profile-select .primary-select-dropdown {
+    top: 40px;
+    border-radius: 0 0 20px 20px;
+    border-top: none;
+    transition: none;
+    width: 100%;
+    color: var(--color-gray3);
+}
+.primary-select.profile-select.active .primary-select-dropdown {
+}
 .primary-select.online-select .primary-select-head {
     padding: 6px 10px;
 }
@@ -744,11 +784,12 @@ input:checked + .primary-input-check {
 .review-photo img {
     width: 50px;
 }
-.hide-scroll::-webkit-scrollbar {
+.hide-scroll::-webkit-scrollbar,
+.burger-menu::-webkit-scrollbar {
     display: none;
 }
 
-.hide-scroll {
+.hide-scroll, .burger-menu {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -1265,6 +1306,67 @@ input:checked + .primary-input-check {
     width: 60px;
     height: 0;
 }
+.profile-bar {
+    padding: 4px 8px;
+    border: 1px solid var(--color-green);
+    border-radius: 100px;
+}
+.profile-bar .photo {
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+.profile-bar .photo img {
+    width: 25px;
+    object-fit: cover;
+}
+.burger-links a {
+    padding: 6px 10px;
+    color: var(--color-gray3);
+    text-decoration: none;
+}
+.burger-select {
+    padding: 6px 0;
+    border-radius: 10px;
+}
+.burger-select .select-head {
+    padding: 0 10px;
+    color: var(--color-gray3);
+}
+.burger-select .select-head::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-left: auto;
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.73332 0.741553L5.49998 3.97489L2.26665 0.741553C1.94165 0.416553 1.41665 0.416553 1.09165 0.741553C0.76665 1.06655 0.76665 1.59155 1.09165 1.91655L4.91665 5.74155C5.24165 6.06655 5.76665 6.06655 6.09165 5.74155L9.91665 1.91655C10.2416 1.59155 10.2416 1.06655 9.91665 0.741553C9.59165 0.424886 9.05832 0.416553 8.73332 0.741553Z' fill='%23BDBDBD'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.burger-select.active .select-head::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.26668 5.2584L5.50002 2.02507L8.73335 5.2584C9.05835 5.5834 9.58335 5.5834 9.90835 5.2584C10.2333 4.9334 10.2333 4.4084 9.90835 4.0834L6.08335 0.258398C5.75835 -0.0666016 5.23335 -0.0666016 4.90835 0.258398L1.08335 4.0834C0.75835 4.4084 0.75835 4.9334 1.08335 5.2584C1.40835 5.57507 1.94168 5.5834 2.26668 5.2584V5.2584Z' fill='%2327AE60'/%3E%3C/svg%3E%0A");
+}
+.burger-select.active {
+    background-color: var(--color-green-light);
+    padding: 10px 0 0;
+}
+.burger-select .select-dropdown .drop-item {
+    padding: 10px 10px;
+    color: var(--color-gray3);
+}
+.burger-select.active .select-head {
+    color: var(--color-green);
+}
+.burger-select.active .select-head path {
+    fill: var(--color-green)
+}
+.burger-select.active .drop-item {
+    color: var(--color-gray2);
+}
+.burger-select.active path {
+    fill: var(--color-gray2);
+}
 
 
 @media (max-width: 1399.98px) { 
@@ -1354,16 +1456,25 @@ input:checked + .primary-input-check {
     .burger-menu {
         position: absolute;
         z-index: 10;
+        max-height: 100dvh;
+        overflow: scroll;
         top: -100%;
         left: 0;
         padding: 20px 40px;
-        transition: var(--transition);
+        transition: opacity var(--transition), visibility var(--transition);
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
         height: 100%;
         background-color: var(--color-white);
         width: 100vw;
+    }
+    .location-select-head {
+        min-width: auto;
+    }
+    .location-select-dropdown {
+        left: auto;
+        right: 0;
     }
 
     .burger-menu.active {
