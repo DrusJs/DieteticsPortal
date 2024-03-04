@@ -439,7 +439,7 @@ a.phone {
     border-radius: 15px;
     background-color: var(--color-gray6);
     padding: 20px;
-    min-width: 400px;
+    min-width: 41%;
 }
 .specialist-actions .price {
     color: var(--color-gray3);
@@ -631,7 +631,7 @@ input:checked + .primary-input-radio {
 }
 .primary-select-dropdown {
     position: absolute;
-    top: 90px;
+    top: 50px;
     left: 0;
     color: var(--color-green);
     list-style: none;
@@ -647,6 +647,9 @@ input:checked + .primary-input-radio {
     visibility: hidden;
     z-index: 2;
     transition: var(--transition);
+}
+.label-space .primary-select-dropdown {
+    top: 90;
 }
 .primary-select-dropdown__item {
     cursor: pointer;
@@ -953,12 +956,95 @@ input:checked + .primary-input-check {
     color: var(--color-gray3);
 }
 
-.month-table.active-table {
+.month-table-wrapper.active-table,
+.week-grid-wrapper.active-table, 
+.day-grid-wrapper.active-table {
     display: block;
 }
-
-.month-table {
+.week-grid-wrapper, .day-grid-wrapper {
     display: none;
+}
+.week-grid-header {
+    display: grid;
+    grid-template-columns: 45px repeat(7, 1fr);
+    text-align: center;
+    padding: 10px 0;
+    overflow: hidden;
+}
+.week-grid-header .text-desc {
+    min-width: 74px;
+}
+.week-grid-row {    
+    height: 60px;
+    display: grid;
+    grid-template-columns: 45px repeat(7, 1fr);
+}
+.day-grid-header {
+    padding: 10px 0;
+}
+.day-grid-row {
+    height: 60px;
+    display: grid;
+    grid-template-columns: 45px 1fr;
+}
+.week-grid-cell, .day-grid-cell {
+    border-bottom: 1px solid var(--color-gray5);
+    min-width: 74px;
+}
+.week-grid-cell.cell-title, .week-grid-body .week-grid-row:first-child .week-grid-cell.cell-title,
+.day-grid-cell.cell-title, .day-grid-body .day-grid-row:first-child .day-grid-cell.cell-title {
+    border: none;
+}
+.week-grid-cell.cell-title p,
+.day-grid-cell.cell-title p {
+    margin-top: -12px;
+}
+.week-grid-body .week-grid-row:first-child .week-grid-cell,
+.day-grid-body .day-grid-row:first-child .day-grid-cell {
+    border-top: 1px solid var(--color-gray5);
+}
+.week-grid-body .week-grid-row:last-child .week-grid-cell,
+.day-grid-body .day-grid-row:last-child .day-grid-cell {
+    border: none;
+}
+.grid-scroll {
+    overflow-y: scroll;
+    overflow-x: auto;
+    max-height: 500px;
+    padding: 50px 0;
+}
+.grid-item {
+    background-color: var(--color-green-light);
+    padding: 3px 3px 3px 13px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    border-radius: 5px;
+}
+.grid-item p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.grid-item::before {
+    content: '';
+    width: 2px;
+    background-color: var(--color-green);
+    height: calc(100% - 6px);
+    border-radius: 2px;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.month-table-wrapper {
+    overflow: scroll;
+    max-width: 100%;
+    display: none;
+    padding: 5px;
+}
+.month-table {
     width: 100%;
     border-collapse: collapse;
 }
@@ -997,6 +1083,7 @@ input:checked + .primary-input-check {
     margin-bottom: 5px;
     border-radius: 5px;
     width: 100%;
+    display: flex;
 }
 .month-table .month-table_item .name {
     width: 50%;
@@ -1076,8 +1163,21 @@ input:checked + .primary-input-check {
     width: 50px;
     object-fit: cover;
 }
+.chat-scroll {
+    max-height: calc(100vh - 200px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0 10px;
+}
+.chat-send-block button {
+    margin-bottom: 5px;
+}
+.chat-text {
+    height: 45px;
+}
 .message {
-    width: 80%;
+    max-width: 80%;
+    width: fit-content;
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -1089,6 +1189,7 @@ input:checked + .primary-input-check {
     position: absolute;
     width: 30px;
     height: 30px;
+    display: none;
     overflow: hidden;
     border-radius: 30px;
 }
@@ -1109,7 +1210,10 @@ input:checked + .primary-input-check {
     background-color: var(--color-gray5);
     margin-left: 38px;
 }
-.message.own::before {
+.message.last-message .photo {
+    display: block;
+}
+.message.own.last-message::before {
     content: '';
     width: 22px;
     height: 23px;
@@ -1118,7 +1222,7 @@ input:checked + .primary-input-check {
     bottom: -6px;
     right: -7px;
 }
-.message.opponent::before {
+.message.opponent.last-message::before {
     content: '';
     width: 22px;
     height: 23px;
@@ -1151,6 +1255,15 @@ input:checked + .primary-input-check {
     padding: 6px 10px;
     border-radius: 5px;
     white-space: nowrap;
+}
+.nav-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.flex-space {
+    width: 60px;
+    height: 0;
 }
 
 
@@ -1299,6 +1412,26 @@ input:checked + .primary-input-check {
     }
     .primary-select.online-select .primary-select-head {
         padding: 4px 8px;
+    }
+    .month-table .month-table_item, .show-consults {
+        display: none;
+    }
+    .month-table td {
+        border: none;
+        border-radius: 5px;
+    }
+    .month-table td.disabled {
+        display: none;
+    }
+    .month-table th {
+        color: var(--color-gray1);
+    }
+    .primary-select.mobile-border .primary-select-head {
+        padding: 2px;
+        border: none;
+    }
+    .primary-select-dropdown {
+        top: 32px;
     }
 }
 @media (max-width: 575.98px) { 
