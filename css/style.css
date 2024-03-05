@@ -158,6 +158,9 @@ a.phone {
     text-decoration: none;
     color: var(--color-green);
 }
+footer a.phone {
+    font-size: 20px;
+}
 .header-action-basket {
     min-width: 36px;
     height: 36px;
@@ -178,7 +181,7 @@ a.phone {
     background-color: var(--color-white);
     border: 1px solid var(--color-green);
     font-size: 8px;
-    line-height: 12px;
+    line-height: 10px;
     padding-left: 1px;
 }
 .header-action-profile {
@@ -186,6 +189,7 @@ a.phone {
     border-radius: 100px;
     text-decoration: none;
     cursor: pointer;
+    padding: 5px 13px;
 }
 .navigation {
     list-style: none;
@@ -200,6 +204,7 @@ a.phone {
     color: var(--color-gray3);
     padding-bottom: 16px;
     cursor: pointer;
+    font-size: 20px;
     transition: var(--transition);
 }
 .navigation__item:hover {
@@ -226,11 +231,13 @@ a.phone {
     border-radius: 15px;
     overflow: hidden;
     min-height: 90px;
+    min-width: 90px;
 }
 .main-image img {
     width: 100%;
     object-fit: cover;
     min-height: 90px;
+    min-width: 90px;
 }
 .swap-select {
     padding: 2px;
@@ -244,7 +251,7 @@ a.phone {
     color: var(--color-gray1);
     transition: var(--transition);
     font-size: 24px;
-    padding: 0 8px;
+    padding: 2px 12px 4px;
     cursor: pointer;
     white-space: nowrap;
     user-select: none;
@@ -410,6 +417,10 @@ a.phone {
     height: 229px;
     border-radius: 10px;
     overflow: hidden;
+}
+.modal-block .specialist-photo {
+    max-width: 129px;
+    height: 129px;
 }
 .specialist-photo img {
     object-fit: cover;
@@ -636,6 +647,7 @@ input:checked + .primary-input-radio {
     color: var(--color-gray3);
 }
 .primary-select.profile-select.active .primary-select-dropdown {
+
 }
 .primary-select.online-select .primary-select-head {
     padding: 6px 10px;
@@ -669,6 +681,7 @@ input:checked + .primary-input-radio {
 .primary-select-label {
     margin-bottom: 16px;
 }
+
 .primary-select-dropdown {
     position: absolute;
     top: 50px;
@@ -688,8 +701,8 @@ input:checked + .primary-input-radio {
     z-index: 2;
     transition: var(--transition);
 }
-.label-space .primary-select-dropdown {
-    top: 90;
+.primary-select.label-space .primary-select-dropdown {
+    top: 90px;
 }
 .primary-select-dropdown__item {
     cursor: pointer;
@@ -819,7 +832,7 @@ input:checked + .primary-input-check {
     background-color: var(--color-gray6);
     width: fit-content;
 }
-.auth-block {
+.auth-block, .container.round.auth-block {
     max-width: 500px;
     margin: 0 auto;
     padding: 50px;
@@ -1146,6 +1159,7 @@ input:checked + .primary-input-check {
 }
 .camera-container .name {
     white-space: nowrap;
+    font-size: 14px;
 }
 .action-panel {
     position: absolute;
@@ -1368,11 +1382,26 @@ input:checked + .primary-input-check {
     fill: var(--color-gray2);
 }
 
-
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1384px;
+    }
+    .container.auth-block {
+        max-width: 500px;
+    }
+}
+@media (min-width: 768px) {
+    .profile-info-scroll  {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-height: 450px;
+    }
+}
 @media (max-width: 1399.98px) { 
     .month-table-wrapper {
         max-width: 784px;
     }
+    
 }
 @media (max-width: 1199.98px) { 
     .month-table-wrapper {
@@ -1422,6 +1451,9 @@ input:checked + .primary-input-check {
     h1.title, .modal-title {
         font-size: 28px;
     }
+    h1.title.mobile {
+        font-size: 20px;
+    }
     h2.title {
         font-size: 20px;
     }
@@ -1443,11 +1475,29 @@ input:checked + .primary-input-check {
     .container.round {
         padding: 15px;
     }
+    .auth-block, .container.round.auth-block {
+        padding: 30px;
+    }
     .swap-select__item {
         font-size: 16px;
     }
     .specialist-actions {
         padding: 10px;
+    }
+    .primary-button.volume {
+        min-width: 35px;
+        height: 35px;
+        width: 35px;
+        padding: 0;
+    }
+    .specialist-info .status {
+        font-size: 12px;
+    }
+    .primary-select.label-space .primary-select-dropdown {
+        top: 75px;
+    }
+    .primary-select.online-select .primary-select-dropdown {
+        top: 34px;
     }
     .specialist-info .status.active {
         border: none;
@@ -1461,6 +1511,23 @@ input:checked + .primary-input-check {
         border-top: none;
         padding: 0;
     }
+    .dot-checkbox, .primary-select {
+        font-size: 14px;
+    }
+    .primary-select-head {
+        padding: 6px 10px;
+    }
+
+    footer a.phone {
+        font-size: 16px;
+    }
+    .doc-item {
+        font-size: 14px;
+    }
+    .navigation__item {
+        font-size: 14px;
+        padding-bottom: 12px;
+    } 
     .burger-menu {
         position: absolute;
         z-index: 10;
@@ -1551,6 +1618,12 @@ input:checked + .primary-input-check {
     }
     .primary-select-dropdown {
         top: 32px;
+    }
+    .logo img {
+        width: 140px;
+    }
+    .main-image {
+        border-radius: 5px;
     }
 }
 @media (max-width: 575.98px) { 
