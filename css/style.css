@@ -1,12 +1,12 @@
 @font-face {
     font-family: "Manrope";
     font-weight: 400;
-    src: url(../fonts/Manrope-Regular.ttf) format(truetype);
+    src: url('../fonts/Manrope-Regular.ttf') format("truetype");
 }
 @font-face {
     font-family: "Manrope";
     font-weight: 600;
-    src: url(../fonts/Manrope-SemiBold.ttf) format(truetype);
+    src: url('../fonts/Manrope-SemiBold.ttf') format("truetype");
 }
 
 * {
@@ -39,7 +39,8 @@
     --color-yellow-light: #F9F5EC;
     --font-primary: "Manrope";
     --transition: 260ms ease-out;
-    --box-shadow-primary: 0px 8px 32px rgba(12, 16, 24, .12)
+    --box-shadow-primary: 0px 8px 32px rgba(12, 16, 24, .12);
+    --bs-body-bg: red;
 }
 
 p {
@@ -67,22 +68,22 @@ h2.title {
     font-weight: 600;
     font-size: 24px;
 }
-p.text-l {
+p.text-l, .text-l {
     font-family: var(--font-primary);
-    font-weight: 400; 
-    font-size: 24px;   
+    font-weight: 400;
+    font-size: 24px;
 }
-p.text-m {
+p.text-m, .text-m {
     font-family: var(--font-primary);
-    font-weight: 400;  
-    font-size: 20px;  
+    font-weight: 400;
+    font-size: 20px;
 }
 p.text-desc {
     font-family: var(--font-primary);
     font-weight: 400;
     font-size: 16px;
 }
-p.text-s {
+p.text-s, .text-s {
     font-family: var(--font-primary);
     font-weight: 400;
     font-size: 14px;
@@ -94,7 +95,7 @@ p.text-s {
     color: var(--color-green);
 }
 
- 
+
 
 
 
@@ -120,7 +121,7 @@ p.text-s {
     width: 16px;
     height: 16px;
     display: inline-block;
-    background-image: url(../images/icons/select-arrow.svg);
+    background-image: url(../img/icons/select-arrow.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 16px;
@@ -219,13 +220,13 @@ footer a.phone {
     height: 36px;
     border: 1px solid var(--color-green);
     border-radius: 100%;
-    background-image: url(../images/icons/burger-icon.svg);
+    background-image: url(../img/icons/burger-icon.svg);
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
 }
 .burger-button.burger-close {
-    background-image: url(../images/icons/modal-close-icon.svg);
+    background-image: url(../img/icons/modal-close-icon.svg);
 }
 .main-image {
     border-radius: 15px;
@@ -270,6 +271,7 @@ footer a.phone {
 
 .footer {
     flex-shrink: 0;
+    margin-bottom: 20px;
 }
 
 .modal-wrapper {
@@ -281,7 +283,11 @@ footer a.phone {
     visibility: hidden;
     pointer-events: none;
     z-index: 15;
-    /* transition: var(--transition); */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*transition: var(--transition);*/
 }
 .modal-wrapper.active {
     opacity: 1;
@@ -289,7 +295,7 @@ footer a.phone {
     pointer-events: all;
 }
 .modal-block {
-    width: 100%;
+    width: fit-content;
     margin: 50px auto;
     border-radius: 15px;
     padding: 30px;
@@ -297,7 +303,6 @@ footer a.phone {
 }
 .modal-block.specialist {
     max-width: 800px;
-
 }
 .modal-block.call-settings {
     max-width: 600px;
@@ -314,15 +319,16 @@ footer a.phone {
     display: flex;
     align-content: center;
     justify-content: center;
+    cursor: pointer;
 }
-.search-item {    
+.search-item {
     width: 100%;
     min-width: 441px;
 }
 .search-item .search {
     padding: 15px 41px 13px 15px;
     width: 100%;
-    background-image: url(../images/icons/search-icon.svg);
+    background-image: url(../img/icons/search-icon.svg);
     background-size: 16px 16px;
     background-position: center right 15px;
     background-repeat: no-repeat;
@@ -362,7 +368,7 @@ footer a.phone {
     width: 16px;
     height: 16px;
     margin-right: 6px;
-    background-image: url(../images/icons/filter-icon.svg);
+    background-image: url(../img/icons/filter-icon.svg);
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -389,7 +395,7 @@ footer a.phone {
     width: 14px;
     height: 14px;
     display: inline-block;
-    background-image: url(../images/icons/person-icon.svg);
+    background-image: url(../img/icons/person-icon.svg);
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -398,7 +404,7 @@ footer a.phone {
     width: 14px;
     height: 14px;
     display: inline-block;
-    background-image: url(../images/icons/email-icon.svg);
+    background-image: url(../img/icons/email-icon.svg);
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -407,7 +413,7 @@ footer a.phone {
     width: 14px;
     height: 14px;
     display: inline-block;
-    background-image: url(../images/icons/exp-icon.svg);
+    background-image: url(../img/icons/exp-icon.svg);
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -453,7 +459,7 @@ footer a.phone {
     min-width: 41%;
 }
 .specialist-actions .price {
-    color: var(--color-gray3);
+    color: var(--color-gray1);
 }
 .specialist-actions-inner {
     border-bottom: 1px solid var(--color-gray3);
@@ -477,6 +483,7 @@ footer a.phone {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 4px;
 }
 .primary-button.complete::after {
     content: '';
@@ -484,8 +491,8 @@ footer a.phone {
     width: 16px;
     height: 16px;
     position: relative;
-    left: 10px;  
-    background-image: url(../images/icons/done-checkbox.svg);
+    left: 10px;
+    background-image: url(../img/icons/done-checkbox.svg);
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -494,8 +501,8 @@ footer a.phone {
     display: inline-block;
     width: 16px;
     height: 16px;
-    margin-right: 6px;  
-    background-image: url(../images/icons/select-arrow.svg);
+    margin-right: 6px;
+    background-image: url(../img/icons/select-arrow.svg);
     background-repeat: no-repeat;
     background-position: center center;
     transform: rotate(90deg);
@@ -505,10 +512,11 @@ footer a.phone {
     display: inline-block;
     width: 16px;
     height: 16px;
-    margin-right: 6px;  
-    background-image: url(../images/icons/select-arrow.svg);
+    margin-right: 6px;
+    background-image: url(../img/icons/select-arrow.svg);
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: 16px 16px;
     transform: rotate(-90deg);
 }
 .primary-button.fill {
@@ -528,7 +536,7 @@ footer a.phone {
     align-items: center;
     justify-content: center;
     height: 36px;
-    line-height: 18px;   
+    line-height: 18px;
     border: 1px solid var(--color-blue);
     background-color: var(--color-white);
     white-space: nowrap;
@@ -595,7 +603,7 @@ input:checked + .primary-input-radio {
     border-radius: 4px;
     border: 1px solid var(--color-gray3);
     background-color: var(--color-white);
-    background-image: url(../images/icons/done-checkbox.svg);
+    background-image: url(../img/icons/done-checkbox.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 15px;
@@ -672,7 +680,7 @@ input:checked + .primary-input-radio {
     width: 16px;
     height: 16px;
     display: inline-block;
-    background-image: url(../images/icons/arrow-icon.svg);
+    background-image: url(../img/icons/arrow-icon.svg);
     transform: rotate(90deg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -992,7 +1000,7 @@ input:checked + .primary-input-check {
     padding-left: 10px;
 }
 .calendar-item__name {
-    
+
 }
 .calendar-item__type {
     color: var(--color-gray3);
@@ -1011,7 +1019,7 @@ input:checked + .primary-input-check {
 }
 
 .month-table-wrapper.active-table,
-.week-grid-wrapper.active-table, 
+.week-grid-wrapper.active-table,
 .day-grid-wrapper.active-table {
     display: block;
 }
@@ -1028,7 +1036,7 @@ input:checked + .primary-input-check {
 .week-grid-header .text-desc {
     min-width: 74px;
 }
-.week-grid-row {    
+.week-grid-row {
     height: 60px;
     display: grid;
     grid-template-columns: 45px repeat(7, 1fr);
@@ -1174,12 +1182,12 @@ input:checked + .primary-input-check {
     display: block;
     width: 14px;
     height: 14px;
-    background-image: url(../images/icons/mic.svg);
+    background-image: url(../img/icons/mic.svg);
     background-position: center center;
     background-repeat: no-repeat;
 }
 .microphone-status.disabled {
-    background-image: url(../images/icons/mic_off.svg);
+    background-image: url(../img/icons/mic_off.svg);
 }
 .open-settings, .micro-control, .camera-control {
     display: flex;
@@ -1196,7 +1204,7 @@ input:checked + .primary-input-check {
     align-items: center;
     justify-content: center;
     background-color: var(--color-white);
-    border: 1px solid var(--color-red);
+    border: 1px solid var(--color-green);
     width: 36px;
     height: 36px;
     border-radius: 36px;
@@ -1255,13 +1263,13 @@ input:checked + .primary-input-check {
 .message.message-system {
     background-color: var(--color-green-light);
 }
-.message.own {    
+.message.own {
     background-color: var(--color-green-light);
     margin-left: auto;
     margin-right: 38px;
     color: var(--color-green);
 }
-.message.opponent {    
+.message.opponent {
     background-color: var(--color-gray5);
     margin-left: 38px;
 }
@@ -1273,7 +1281,7 @@ input:checked + .primary-input-check {
     width: 22px;
     height: 23px;
     position: absolute;
-    background-image: url(../images/icons/chat-subicon-green.svg);
+    background-image: url(../img/icons/chat-subicon-green.svg);
     bottom: -6px;
     right: -7px;
 }
@@ -1282,7 +1290,7 @@ input:checked + .primary-input-check {
     width: 22px;
     height: 23px;
     position: absolute;
-    background-image: url(../images/icons/chat-subicon-gray.svg);
+    background-image: url('../img/icons/chat-subicon-gray.svg');
     bottom: -6px;
     left: -7px;
 }
@@ -1381,6 +1389,42 @@ input:checked + .primary-input-check {
 .burger-select.active path {
     fill: var(--color-gray2);
 }
+.arrow-after {
+    width: 100%;
+    padding: 0 20px;
+}
+.arrow-after::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    background-image: url(../img/icons/select-arrow.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--color-green);
+    border-radius: 36px;
+    background-color: var(--color-white);
+    transform: rotate(-90deg);
+}
+.pin {
+    border-radius: 20px;
+    color: var(--color-white);
+    width: fit-content;
+    padding: 2px 10px;
+    margin-bottom: 8px;
+}
+.pin.bg-blue {
+    background-color: var(--color-blue);
+}
+.code-input {
+    width: 35px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 24px;
+}
 
 @media (min-width: 1400px) {
     .container {
@@ -1397,13 +1441,13 @@ input:checked + .primary-input-check {
         max-height: 450px;
     }
 }
-@media (max-width: 1399.98px) { 
+@media (max-width: 1399.98px) {
     .month-table-wrapper {
         max-width: 784px;
     }
-    
+
 }
-@media (max-width: 1199.98px) { 
+@media (max-width: 1199.98px) {
     .month-table-wrapper {
         max-width: 604px;
     }
@@ -1429,7 +1473,7 @@ input:checked + .primary-input-check {
     }
     .search-item {
         min-width: auto;
-    } 
+    }
     .filter-search-block {
         width: 100%;
     }
@@ -1444,10 +1488,10 @@ input:checked + .primary-input-check {
     .favorite-button.active path {
         fill: var(--color-green);
         stroke: var(--color-green);
-    } 
+    }
 
 }
-@media (max-width: 767.98px) { 
+@media (max-width: 767.98px) {
     h1.title, .modal-title {
         font-size: 28px;
     }
@@ -1457,16 +1501,16 @@ input:checked + .primary-input-check {
     h2.title {
         font-size: 20px;
     }
-    p.text-l {
-        font-size: 18px;   
+    p.text-l, .text-l {
+        font-size: 18px;
     }
-    p.text-m  {
-        font-size: 16px;  
+    p.text-m, .text-m  {
+        font-size: 16px;
     }
     p.text-desc {
         font-size: 14px;
     }
-    p.text-s {
+    p.text-s, .text-s {
         font-size: 12px;
     }
     .location-select {
@@ -1527,7 +1571,7 @@ input:checked + .primary-input-check {
     .navigation__item {
         font-size: 14px;
         padding-bottom: 12px;
-    } 
+    }
     .burger-menu {
         position: absolute;
         z-index: 10;
@@ -1626,7 +1670,7 @@ input:checked + .primary-input-check {
         border-radius: 5px;
     }
 }
-@media (max-width: 575.98px) { 
+@media (max-width: 575.98px) {
     .specialist-photo {
         max-width: 75px;
         height: 75px;

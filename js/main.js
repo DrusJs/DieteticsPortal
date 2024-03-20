@@ -80,7 +80,7 @@ if (document.querySelector('.profile-menu-list.js-containers')) {
     })
 }
 
-if (document.querySelector('.js-open-modal')) {
+if (document.querySelector('.js-open-modal') || document.querySelector('.js-close-modal')) {
     document.querySelectorAll('.js-open-modal').forEach(el=>{
         el.addEventListener('click', (event)=>{
             document.getElementById(event.currentTarget.dataset.modal).classList.add('active')
@@ -189,3 +189,11 @@ if (document.querySelector('.review-scroll')) {
       slider.scrollLeft = scrollLeft - walk
     })
 }
+document.querySelectorAll('.code-input').forEach(input=>{
+    input.addEventListener('input', (event)=>{
+        event.currentTarget.blur()
+        if (event.currentTarget.nextElementSibling) {
+            event.currentTarget.nextElementSibling.focus()
+        }
+    })
+})

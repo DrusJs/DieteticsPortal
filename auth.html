@@ -19,7 +19,7 @@
                     <button class="primary-button bordered arrow mb-2" onclick="nextStep(this)">Дальше</button>
                     <a href="registration.html" class="primary-link text-center mb-5">Войти через Логин и пароль</a>
                     <p class="c-gray text-s my-2 ">Или войдите через Госуслуги</p>
-                    <button class="blue-button mb-2"><img src="images/gosuslugi.png" alt="">Войти через Госуслуги</button>
+                    <button class="blue-button mb-2"><img src="img/gosuslugi.png" alt="">Войти через Госуслуги</button>
                     <p class="c-gray text-desc mt-4">Забыли пароль? <a href="forgot-pass.html" class="primary-link blue">Восстановить</a></p>
                 </div>
                 <div class="container round auth-block d-none flex-column">
@@ -34,6 +34,28 @@
                     </div>
                 </div>
             </main>
+            <div class="modal-wrapper mobile-swipe active" id="phone-verify-modal">
+                <div class="modal-block">
+                    <p class="modal-title c-green text-center mb-3">Подтверждение телефона</p>
+                    <p class="text-desc text-center">Введите код, который пришел к вам на телефон</p>
+                    <div class="d-flex justify-content-center mb-3 mt-4">
+                        <input type="text" class="code-input" placeholder="_" maxlength="1">
+                        <input type="text" class="code-input" placeholder="_" maxlength="1">
+                        <input type="text" class="code-input" placeholder="_" maxlength="1">
+                        <input type="text" class="code-input" placeholder="_" maxlength="1">
+                        <input type="text" class="code-input" placeholder="_" maxlength="1">
+                    </div>
+                    <button class="primary-button fill w-100 js-close-modal">Подтвердить</button>
+                </div>
+            </div>
+            <div class="modal-wrapper mobile-swipe" id="email-verify-modal">
+                <div class="modal-block">
+                    <p class="modal-title c-green text-center mb-4">Подтверждение эл.почты</p>
+                    <p class="text-desc text-center mb-4">На почту <strong>ergey@mail.ru</strong> отправлено подтверждение.</p>
+                    <div class="d-flex gap-3"></div>
+                    <button class="primary-button fill w-100 js-close-modal">Хорошо</button>
+                </div>
+            </div>
         </div>
     <script src="js/main.js" type="text/javascript"></script>
     </body>
