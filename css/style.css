@@ -289,6 +289,19 @@ footer a.phone {
     left: 0;
     /*transition: var(--transition);*/
 }
+.modal-wrapper.bg-none {
+    background-color: transparent;
+    top: auto;
+    left: auto;
+    right: 20px;
+    bottom: 20px;
+    width: fit-content;
+    height: auto;
+}
+.modal-wrapper.bg-none .modal-block {
+    box-shadow: var(--box-shadow-primary);
+    max-width: 500px;
+}
 .modal-wrapper.active {
     opacity: 1;
     visibility: visible;
@@ -1231,6 +1244,9 @@ input:checked + .primary-input-check {
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 0 10px;
+}
+.modal-block .chat-scroll {
+    max-height: 400px;
 }
 .chat-send-block button {
     margin-bottom: 5px;
