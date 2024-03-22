@@ -189,11 +189,30 @@ if (document.querySelector('.review-scroll')) {
       slider.scrollLeft = scrollLeft - walk
     })
 }
+
+
 document.querySelectorAll('.code-input').forEach(input=>{
     input.addEventListener('input', (event)=>{
         event.currentTarget.blur()
         if (event.currentTarget.nextElementSibling) {
             event.currentTarget.nextElementSibling.focus()
+        }
+    })
+})
+
+if (document.querySelector('.full-screen-camera')) {
+    document.querySelector('.full-screen-camera').addEventListener('click', (event)=>{
+        event.currentTarget.classList.toggle('active')
+        event.currentTarget.closest('.modal-wrapper').classList.toggle('fullscreen')
+    })
+}
+document.querySelectorAll('.call-modal-nav__item').forEach(el=>{
+    el.addEventListener('click', (event)=>{
+        if (!event.currentTarget.classList.contains('active')) {
+            event.currentTarget.parentElement.querySelector('.active').classList.remove('active')
+            event.currentTarget.classList.add('active')
+            event.currentTarget.closest('.modal-wrapper').querySelector('.modal-block.active').classList.remove('active')
+            event.currentTarget.closest('.modal-wrapper').querySelectorAll('.modal-block')[event.currentTarget.dataset.container].classList.add('active')
         }
     })
 })
