@@ -247,3 +247,16 @@ document.querySelectorAll('.js-prev-quiz').forEach(el=>{
         
     })
 })
+document.querySelectorAll('.options-menu-button').forEach(el=>{
+    el.addEventListener('click', (event)=>{
+        event.currentTarget.nextElementSibling.classList.toggle('active')
+    })
+})
+document.querySelectorAll('.js-change-block').forEach(el=>{
+    el.addEventListener('click', (event)=>{
+        event.currentTarget.closest('.profile-info').classList.remove('d-block')
+        event.currentTarget.closest('.profile-info').classList.add('d-none')
+        document.getElementById(event.currentTarget.dataset.block).classList.add('d-block')
+        document.getElementById(event.currentTarget.dataset.block).classList.remove('d-none')
+    })
+})
