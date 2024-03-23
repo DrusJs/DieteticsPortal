@@ -84,7 +84,9 @@ if (document.querySelector('.js-open-modal') || document.querySelector('.js-clos
     document.querySelectorAll('.js-open-modal').forEach(el=>{
         el.addEventListener('click', (event)=>{
             document.getElementById(event.currentTarget.dataset.modal).classList.add('active')
-            document.body.classList.add('no-scroll')
+            if (!event.currentTarget.classList.contains('js-enable-scroll')) {
+                document.body.classList.add('no-scroll')
+            }
         })
     })
     document.querySelectorAll('.js-close-modal').forEach(el=>{
@@ -216,3 +218,13 @@ document.querySelectorAll('.call-modal-nav__item').forEach(el=>{
         }
     })
 })
+
+if (document.getElementById('show-quick-chat')) {
+    document.getElementById('show-quick-chat').addEventListener('click', (event)=>{
+        event.currentTarget.classList.add('hide')
+    })
+
+    document.querySelector('#chat-modal .modal-close').addEventListener('click', ()=>{
+        document.getElementById('show-quick-chat').classList.remove('hide')
+    })
+}
