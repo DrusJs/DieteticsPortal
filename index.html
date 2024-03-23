@@ -534,17 +534,17 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-wrapper active" id="service-modal">
-                <div class="modal-block">
+            <div class="modal-wrapper active" id="quiz-modal">
+                <div class="modal-block quiz-modal">
                     <div class="d-flex align-items-center justify-content-between">
                         <h2 class="title c-green">Заполните анкету для консультации</h2>
                         <p class="modal-title">
-                            <span class="c-green">1</span>
+                            <span class="c-green active-step" id="quiz-step-iter">1</span>
                             <span class="c-gray separate">/</span>
-                            <span class="c-gray count">10</span>
+                            <span class="c-gray count-step">10</span>
                         </p>
                     </div>
-                    <div class="quiz-step">
+                    <div class="quiz-step" data-step="1">
                         <p class="text-l c-green mt-3">Мои цели</p>
                         <div class="d-flex flex-sm-row flex-column gap-sm-3 my-sm-1 ">
                             <input type="checkbox" id="my-point1">
@@ -572,9 +572,9 @@
                             <p class="text primary-input-label m-0">Другие цели</p>
                             <textarea class="primary-input w-100"></textarea>
                         </div>
-                        <button class="primary-button fill arrow ms-auto mt-3">Дальше</button>
+                        <button class="primary-button fill arrow ms-auto mt-3 js-next-quiz">Дальше</button>
                     </div>
-                    <div class="quiz-step hide">
+                    <div class="quiz-step hide" data-step="2">
                         <p class="text-l c-green mt-3">Параметры</p>
                         <div class="d-flex flex-md-row flex-column gap-3 my-1">
                             <div class="d-flex flex-column gap-1 w-md-50 w-100">
@@ -598,8 +598,8 @@
                         </div>
 
                         <div class="d-flex gap-3 justify-content-end mt-3">
-                            <button class="primary-button bordered back">Назад</button>
-                            <button class="primary-button fill arrow">Дальше</button>
+                            <button class="primary-button bordered back  js-prev-quiz">Назад</button>
+                            <button class="primary-button fill arrow  js-next-quiz">Дальше</button>
                         </div>
                     </div>
                 </div>

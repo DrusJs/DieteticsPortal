@@ -341,16 +341,24 @@ footer a.phone {
 }
 .modal-block.specialist {
     max-width: 800px;
+    width: 100%;
 }
 .modal-block.call-settings {
     max-width: 600px;
+    width: 100%;
 }
 .modal-block.authorize {
     max-width: 500px;
+    width: 100%;
 }
 .modal-block.call-modal {
     max-width: 700px;
     margin-right: 20px;
+    width: 100%;
+}
+.modal-block.quiz-modal {
+    max-width: 1000px;
+    width: 100%;
 }
 .modal-close {
     margin-left: auto;
@@ -526,12 +534,17 @@ footer a.phone {
     padding: 0;
 }
 .primary-button.arrow,
-.primary-button.back,
 .primary-button.complete {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-right: 4px;
+}
+.primary-button.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4px;
 }
 .primary-button.complete::after {
     content: '';
@@ -1533,6 +1546,7 @@ input:checked + .primary-input-check {
     outline: none;
     font-size: 24px;
 }
+
 .quiz-step.hide {
     display: none;
 }

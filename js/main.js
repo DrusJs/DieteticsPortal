@@ -228,3 +228,22 @@ if (document.getElementById('show-quick-chat')) {
         document.getElementById('show-quick-chat').classList.remove('hide')
     })
 }
+document.querySelectorAll('.js-next-quiz').forEach(el=>{
+    el.addEventListener('click', (event)=>{
+        if (event.currentTarget.closest('.quiz-step').nextElementSibling) {
+            event.currentTarget.closest('.quiz-step').classList.add('hide')
+            event.currentTarget.closest('.quiz-step').nextElementSibling.classList.remove('hide')
+            document.getElementById('quiz-step-iter').innerHTML = event.currentTarget.closest('.quiz-step').nextElementSibling.dataset.step
+        }
+    })
+})
+document.querySelectorAll('.js-prev-quiz').forEach(el=>{
+    el.addEventListener('click', (event)=>{
+        if (event.currentTarget.closest('.quiz-step').previousElementSibling) {
+            event.currentTarget.closest('.quiz-step').classList.add('hide')
+            event.currentTarget.closest('.quiz-step').previousElementSibling.classList.remove('hide')
+            document.getElementById('quiz-step-iter').innerHTML = event.currentTarget.closest('.quiz-step').previousElementSibling.dataset.step
+        }
+        
+    })
+})
