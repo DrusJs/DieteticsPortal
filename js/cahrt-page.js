@@ -51,7 +51,7 @@ const getOrCreateTooltip = (chart) => {
             th.classList.add('warning')
             th.innerHTML = `
             <div style='display: flex; flex-direction: column;'>
-            <span>Недостаточно</span>
+            <span class='title'>Недостаточно</span>
             <span>Ещё ${1500 - tooltip.dataPoints[0].raw} ккал</span>
             </div>
           `
@@ -135,6 +135,9 @@ const getOrCreateTooltip = (chart) => {
         },
         options: {
             hover: {mode: null},
+            animation: {
+              duration: 0
+            },
             scales: {                
                 y: {
                     beginAtZero: true,
@@ -217,6 +220,9 @@ const getOrCreateTooltip = (chart) => {
         },
         options: {
             hover: {mode: null},
+            animation: {
+              duration: 0
+            },
             scales: {
                 y: {
                     beginAtZero: true,
