@@ -1075,10 +1075,10 @@
                                 </div>
                                 <div class="chart-tabs pt-lg-3 pt-2">
                                     <div class="month-table-wrapper hide-scroll active-table">
-                                        <canvas id="month-chart"></canvas>
+                                        <canvas id="month-chart" class="w-100"></canvas>
                                     </div>
                                     <div class="week-grid-wrapper">
-                                        <canvas id="week-chart"></canvas>
+                                        <canvas id="week-chart" class="w-100"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -1116,128 +1116,6 @@
         </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/main.js" type="text/javascript"></script>
-    <script>
-        const ctx = document.getElementById('month-chart');
-        const data1 = [1501, 2001, 1000, 800, 500, 1000, 2000, 1800, 2000, 1600, 1550, 1300, 1500, 2000, 1200, 1600, 1800, 1550]
-        const bgcolor1 = []
-        const bordercolor1 = []
-
-        for (let i=0; i<data1.length; i++) {
-            if (data1[i]>1500) {
-                bgcolor1.push('#27AE60')
-                bordercolor1.push('#27AE60')
-            } else {
-                bgcolor1.push('#FEEDED')
-                bordercolor1.push('#EB5757')
-            }
-        }
-
-        new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['1, пт', '2, сб', '3, вс', '4, пн', '5, вт', '6, ср', '7, чт', '8, пт', '9, сб', '10, вс', '11, пн', '12, вт', '13, ср', '14, чт', '15, пт', '16, сб', '17, вс', '18, пн'],
-            datasets: [{
-            label: 'Ккал',
-            data: data1,
-            backgroundColor: bgcolor1,
-            borderColor: bordercolor1,
-            borderWidth: 2,
-            borderRadius: {
-                topLeft: 20,
-                topRight: 20
-            },
-            borderSkipped: false,
-            min: 4000,           
-            }]
-        },
-        options: {
-            scales: {                
-                y: {
-                    beginAtZero: true,
-                    grid: {
-                        color: (context) => {
-                            if(context.tick.value == 1500) {
-                                return '#27AE60'
-                            } else {
-                                return '#F1F1F1'
-                            }
-                        }
-                    }
-                },
-                x: {
-                    grid: {
-                        display: false
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    display: false,
-                }
-            }
-        }
-        });
-
-        
-        const ctx2 = document.getElementById('week-chart');
-        const data2 = [1501, 2001, 1000, 800, 500, 1000, 2000]
-        const bgcolor2 = []
-        const bordercolor2 = []
-
-        for (let i=0; i<data2.length; i++) {
-            if (data2[i]>1500) {
-                bgcolor2.push('#27AE60')
-                bordercolor2.push('#27AE60')
-            } else {
-                bgcolor2.push('#FEEDED')
-                bordercolor2.push('#EB5757')
-            }
-        }
-
-        new Chart(ctx2, {
-        type: 'bar',
-        data: {
-            labels: ['1, пт', '2, сб', '3, вс', '4, пн', '5, вт', '6, ср', '7, чт'],
-            datasets: [{
-            label: 'Ккал',
-            data: data2,
-            backgroundColor: bgcolor2,
-            borderColor: bordercolor2,
-            borderWidth: 2,
-            borderRadius: {
-                topLeft: 20,
-                topRight: 20
-            },
-            borderSkipped: false,  
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    grid: {
-                        color: (context) => {
-                            if(context.tick.value == 1500) {
-                                return '#27AE60'
-                            } else {
-                                return '#F1F1F1'
-                            }
-                        }
-                    }
-                },
-                x: {
-                    grid: {
-                        display: false
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    display: false,
-                }
-            }
-        }
-        });
-    </script>
+    <script src="js/cahrt-page.js" type="text/javascript"></script>
     </body>
 </html>
