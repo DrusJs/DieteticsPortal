@@ -59,6 +59,22 @@ if (document.querySelector('.js-swap-table')) {
         })
     })
 }
+if (document.querySelector('.js-swap-chart')) {
+    let elements = Array.from(document.querySelector('.js-swap-chart').children)
+    let tabs = Array.from(document.querySelector('.chart-tabs').children)
+    elements.forEach(item=>{
+        item.addEventListener('click', (event)=>{
+            if (!event.currentTarget.classList.contains('active')) {
+                event.currentTarget.parentElement.querySelector('.active').classList.remove('active')
+                event.currentTarget.classList.add('active')
+                if (document.querySelector('.chart-tabs .active-table')) {
+                    document.querySelector('.chart-tabs .active-table').classList.remove('active-table')
+                }
+                tabs[+event.currentTarget.dataset.table].classList.add('active-table')
+            }
+        })
+    })
+}
 if (document.querySelector('.profile-menu-list.js-containers')) {
     let elements = Array.from(document.querySelector('.profile-menu-list').children)
     let tabs = document.querySelectorAll('.profile-container')

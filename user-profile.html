@@ -6,6 +6,7 @@
 
         <link rel="icon" href="favicon.png">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/apexcharts.css">
         <link rel="stylesheet" href="css/style.css">
 
         <title>Диетология</title>
@@ -1043,10 +1044,9 @@
                                         </div>
                                     </div>
 
-                                    <div class="swap-select js-swap-table d-flex gap-1">
+                                    <div class="swap-select js-swap-chart d-flex gap-1">
                                         <span class="swap-select__item active" data-table="0">Месяц</span>
                                         <span class="swap-select__item" data-table="1">Неделя</span>
-                                        <span class="swap-select__item" data-table="2">День</span>
                                     </div>
                                     <div class="flex-space"></div>
                                     <div class="nav-buttons d-flex gap-3">
@@ -1073,586 +1073,12 @@
                                         <li class="primary-select-dropdown__item">Февраль, 2024</li>
                                     </ul>
                                 </div>
-                                <div class="tables-tabs pt-lg-3 pt-2">
+                                <div class="chart-tabs pt-lg-3 pt-2">
                                     <div class="month-table-wrapper hide-scroll active-table">
-                                        <table class="month-table">
-                                            <tr class="month-table-header">
-                                                <th>Пн</th>
-                                                <th>Вт</th>
-                                                <th>Ср</th>
-                                                <th>Чт</th>
-                                                <th>Пт</th>
-                                                <th>Сб</th>
-                                                <th>Вс</th>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">1</p>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Ольга</span>
-                                                            <span class="time">12:00</span>
-                                                        </div>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Татьяна</span>
-                                                            <span class="time">13:00</span>
-                                                        </div>
-                                                        <button class="show-consults">Еще 3</button>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">2</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">3</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">4</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">5</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">6</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">7</p>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">8</p>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Ольга</span>
-                                                            <span class="time">12:00</span>
-                                                        </div>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Татьяна</span>
-                                                            <span class="time">13:00</span>
-                                                        </div>
-                                                        <button class="show-consults">Еще 3</button>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">9</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">10</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">11</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">12</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">13</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">14</p>
-                                                    </div>
-                                                </td>
-                                            </tr>                                    
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">15</p>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Ольга</span>
-                                                            <span class="time">12:00</span>
-                                                        </div>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Татьяна</span>
-                                                            <span class="time">13:00</span>
-                                                        </div>
-                                                        <button class="show-consults">Еще 3</button>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">16</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">17</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">18</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">19</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">20</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">21</p>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">22</p>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Ольга</span>
-                                                            <span class="time">12:00</span>
-                                                        </div>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Татьяна</span>
-                                                            <span class="time">13:00</span>
-                                                        </div>
-                                                        <button class="show-consults">Еще 3</button>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">23</p>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Ольга</span>
-                                                            <span class="time">12:00</span>
-                                                        </div>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Татьяна</span>
-                                                            <span class="time">13:00</span>
-                                                        </div>
-                                                        <button class="show-consults">Еще 3</button>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">24</p>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Ольга</span>
-                                                            <span class="time">12:00</span>
-                                                        </div>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Татьяна</span>
-                                                            <span class="time">13:00</span>
-                                                        </div>
-                                                        <button class="show-consults">Еще 3</button>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">25</p>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Ольга</span>
-                                                            <span class="time">12:00</span>
-                                                        </div>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Татьяна</span>
-                                                            <span class="time">13:00</span>
-                                                        </div>
-                                                        <button class="show-consults">Еще 3</button>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">26</p>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Ольга</span>
-                                                            <span class="time">12:00</span>
-                                                        </div>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Татьяна</span>
-                                                            <span class="time">13:00</span>
-                                                        </div>
-                                                        <button class="show-consults">Еще 3</button>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">27</p>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Ольга</span>
-                                                            <span class="time">12:00</span>
-                                                        </div>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Татьяна</span>
-                                                            <span class="time">13:00</span>
-                                                        </div>
-                                                        <button class="show-consults">Еще 3</button>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">28</p>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Ольга</span>
-                                                            <span class="time">12:00</span>
-                                                        </div>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Татьяна</span>
-                                                            <span class="time">13:00</span>
-                                                        </div>
-                                                        <button class="show-consults">Еще 3</button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">29</p>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Ольга</span>
-                                                            <span class="time">12:00</span>
-                                                        </div>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Татьяна</span>
-                                                            <span class="time">13:00</span>
-                                                        </div>
-                                                        <button class="show-consults">Еще 3</button>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">30</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">31</p>
-                                                    </div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">1</p>
-                                                    </div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">2</p>
-                                                    </div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">3</p>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Ольга</span>
-                                                            <span class="time">12:00</span>
-                                                        </div>
-                                                        <div class="month-table_item">
-                                                            <span class="name">Татьяна</span>
-                                                            <span class="time">13:00</span>
-                                                        </div>
-                                                        <button class="show-consults">Еще 3</button>
-                                                    </div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="d-flex flex-column">
-                                                        <p class="day">4</p>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                        <div class="month-chart" id="month-chart"></div>
                                     </div>
                                     <div class="week-grid-wrapper">
-                                        <div class="week-grid-header">
-                                            <span></span>
-                                            <span class="text-desc c-gray">Пн, 1</span>
-                                            <span class="text-desc c-gray">Вт, 2</span>
-                                            <span class="text-desc c-gray">Ср, 3</span>
-                                            <span class="text-desc c-gray">Чт, 4</span>
-                                            <span class="text-desc c-gray">Пт, 5</span>
-                                            <span class="text-desc c-gray">Сб, 6</span>
-                                            <span class="text-desc c-gray">Вс, 7</span>
-                                        </div>
-                                        <div class="week-grid-body grid-scroll hide-scroll">
-                                            <div class="week-grid-row">
-                                                <div class="week-grid-cell cell-title">
-                                                    <p class="text-s">11:00</p>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell">
-                                                    <div class="grid-item d-flex flex-column-reverse">
-                                                        <p class="text-s c-green">11:00</p>
-                                                        <p class="text-desc">Ольга Иванова</p>
-                                                    </div>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell">
-                                                    <div class="grid-item d-flex flex-column-reverse">
-                                                        <p class="text-s c-green">11:00</p>
-                                                        <p class="text-desc">Ольга Иванова</p>
-                                                    </div>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell">
-                                                    <div class="grid-item d-flex flex-column-reverse">
-                                                        <p class="text-s c-green">11:00</p>
-                                                        <p class="text-desc">Ольга Иванова</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="week-grid-row">
-                                                <div class="week-grid-cell cell-title">
-                                                    <p class="text-s">12:00</p>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"> 
-                                                    <div class="grid-item d-flex flex-column-reverse">
-                                                        <p class="text-s c-green">11:00</p>
-                                                        <p class="text-desc">Ольга Иванова</p>
-                                                    </div>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                            </div>
-                                            <div class="week-grid-row">
-                                                <div class="week-grid-cell cell-title">
-                                                    <p class="text-s">13:00</p>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                            </div>
-                                            <div class="week-grid-row">
-                                                <div class="week-grid-cell cell-title">
-                                                    <p class="text-s">14:00</p>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                            </div>
-                                            <div class="week-grid-row">
-                                                <div class="week-grid-cell cell-title">
-                                                    <p class="text-s">15:00</p>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                            </div>
-                                            <div class="week-grid-row">
-                                                <div class="week-grid-cell cell-title">
-                                                    <p class="text-s">16:00</p>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                            </div>
-                                            <div class="week-grid-row">
-                                                <div class="week-grid-cell cell-title">
-                                                    <p class="text-s">17:00</p>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell">
-                                                    <div class="grid-item d-flex flex-column-reverse">
-                                                        <p class="text-s c-green">17:00</p>
-                                                        <p class="text-desc">Ольга Иванова</p>
-                                                    </div>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell">
-                                                    <div class="grid-item d-flex flex-column-reverse">
-                                                        <p class="text-s c-green">17:00</p>
-                                                        <p class="text-desc">Ольга Иванова</p>
-                                                    </div>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                            </div>
-                                            <div class="week-grid-row">
-                                                <div class="week-grid-cell cell-title">
-                                                    <p class="text-s">18:00</p>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                            </div>
-                                            <div class="week-grid-row">
-                                                <div class="week-grid-cell cell-title">
-                                                    <p class="text-s">19:00</p>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                            </div>
-                                            <div class="week-grid-row">
-                                                <div class="week-grid-cell cell-title">
-                                                    <p class="text-s">20:00</p>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                            </div>
-                                            <div class="week-grid-row">
-                                                <div class="week-grid-cell cell-title">
-                                                    <p class="text-s">21:00</p>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell">
-                                                    <div class="grid-item d-flex flex-column-reverse">
-                                                        <p class="text-s c-green">21:00</p>
-                                                        <p class="text-desc">Ольга Иванова</p>
-                                                    </div>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell"></div>
-                                                <div class="week-grid-cell">
-                                                    <div class="grid-item d-flex flex-column-reverse">
-                                                        <p class="text-s c-green">21:00</p>
-                                                        <p class="text-desc">Ольга Иванова</p>
-                                                    </div>
-                                                </div>
-                                                <div class="week-grid-cell"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="day-grid-wrapper">
-                                        <div class="day-grid-header">
-                                            <p class="text-desc c-gray w-100 text-center">Пн, 1</p>
-                                        </div>
-                                        <div class="day-grid-body grid-scroll hide-scroll">
-                                            <div class="day-grid-row">
-                                                <div class="day-grid-cell cell-title">
-                                                    <p class="text-s">11:00</p>
-                                                </div>
-                                                <div class="day-grid-cell">
-                                                    <div class="grid-item d-flex flex-column-reverse">
-                                                        <p class="text-s c-green">11:00</p>
-                                                        <p class="text-desc">Ольга Иванова</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="day-grid-row">
-                                                <div class="day-grid-cell cell-title">
-                                                    <p class="text-s">12:00</p>
-                                                </div>
-                                                <div class="day-grid-cell"></div>
-                                            </div>
-                                            <div class="day-grid-row">
-                                                <div class="day-grid-cell cell-title">
-                                                    <p class="text-s">13:00</p>
-                                                </div>
-                                                <div class="day-grid-cell">
-                                                    <div class="grid-item d-flex flex-column-reverse">
-                                                        <p class="text-s c-green">13:00</p>
-                                                        <p class="text-desc">Ольга Иванова</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="day-grid-row">
-                                                <div class="day-grid-cell cell-title">
-                                                    <p class="text-s">14:00</p>
-                                                </div>
-                                                <div class="day-grid-cell"></div>
-                                            </div>
-                                            <div class="day-grid-row">
-                                                <div class="day-grid-cell cell-title">
-                                                    <p class="text-s">15:00</p>
-                                                </div>
-                                                <div class="day-grid-cell"></div>
-                                            </div>
-                                            <div class="day-grid-row">
-                                                <div class="day-grid-cell cell-title">
-                                                    <p class="text-s">16:00</p>
-                                                </div>
-                                                <div class="day-grid-cell"></div>
-                                            </div>
-                                            <div class="day-grid-row">
-                                                <div class="day-grid-cell cell-title">
-                                                    <p class="text-s">17:00</p>
-                                                </div>
-                                                <div class="day-grid-cell"></div>
-                                            </div>
-                                            <div class="day-grid-row">
-                                                <div class="day-grid-cell cell-title">
-                                                    <p class="text-s">18:00</p>
-                                                </div>
-                                                <div class="day-grid-cell"></div>
-                                            </div>
-                                            <div class="day-grid-row">
-                                                <div class="day-grid-cell cell-title">
-                                                    <p class="text-s">19:00</p>
-                                                </div>
-                                                <div class="day-grid-cell"></div>
-                                            </div>
-                                            <div class="day-grid-row">
-                                                <div class="day-grid-cell cell-title">
-                                                    <p class="text-s">20:00</p>
-                                                </div>
-                                                <div class="day-grid-cell"></div>
-                                            </div>
-                                            <div class="day-grid-row">
-                                                <div class="day-grid-cell cell-title">
-                                                    <p class="text-s">21:00</p>
-                                                </div>
-                                                <div class="day-grid-cell">
-                                                    <div class="grid-item d-flex flex-column-reverse">
-                                                        <p class="text-s c-green">21:00</p>
-                                                        <p class="text-desc">Ольга Иванова</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <div class="week-chart" id="week-chart"></div>
                                     </div>
                                 </div>
                             </div>
@@ -1688,6 +1114,125 @@
                 </div>
             </footer>
         </div>
+    <script src="js/apexcharts.min.js" type="text/javascript"></script>
     <script src="js/main.js" type="text/javascript"></script>
+    <script>
+        var options = {
+          series: [{
+          name: 'Ккал',
+          data: [1501, 2000, 1000, 800, 500, 1000, 2000, 1800, 2000, 1600, 1550, 1300, 1500, 2000, 1200, 1600, 1800, 1550]
+        }],
+          chart: {
+          type: 'bar',
+          height: 350
+        },
+        plotOptions: {
+          bar: {
+            colors: {
+              ranges: [{
+                from: 0,
+                to: 1500,
+                color: '#FEEDED'
+              }, {
+                from: 1501,
+                to: 10000,
+                color: '#27AE60'
+              }]
+            },
+            horizontal: false,
+            columnWidth: '65%',
+            borderRadius: 14,            
+            borderRadiusApplication: 'end',
+            borderRadiusWhenStacked: 'all',
+            endingShape: 'rounded'
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          width: 1,
+          colors: ["#EB5757"],
+        },
+        xaxis: {
+          categories: ['1, пт', '2, сб', '3, вс', '4, пн', '5, вт', '6, ср', '7, чт', '8, пт', '9, сб', '10, вс', '11, пн', '12, вт', '13, ср', '14, чт', '15, пт', '16, сб', '17, вс', '18, пн'],
+        },
+        yaxis: {
+          
+        },
+        fill: {
+          opacity: 1
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return val
+            }
+          }
+        }
+        };
+
+        var options2 = {
+          series: [{
+          name: 'Ккал',
+          data: [1501, 2000, 1000, 800, 500, 1000, 2000]
+        }],
+          chart: {
+          type: 'bar',
+          height: 350
+        },
+        plotOptions: {
+          bar: {
+            colors: {
+              ranges: [{
+                from: 0,
+                to: 1500,
+                color: '#FEEDED'
+              }, {
+                from: 1501,
+                to: 10000,
+                color: '#27AE60'
+              }]
+            },
+            horizontal: false,
+            columnWidth: '65%',
+            borderRadius: 14,            
+            borderRadiusApplication: 'end',
+            borderRadiusWhenStacked: 'all',
+            endingShape: 'rounded'
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          width: 1,
+          colors: ["#EB5757"],
+        },
+        xaxis: {
+          categories: ['1, пт', '2, сб', '3, вс', '4, пн', '5, вт', '6, ср', '7, чт'],
+        },
+        yaxis: {
+          
+        },
+        fill: {
+          opacity: 1
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return val
+            }
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#month-chart"), options);
+        chart.render();
+        var chart2 = new ApexCharts(document.querySelector("#week-chart"), options2);
+        chart2.render();
+    </script>
     </body>
 </html>
